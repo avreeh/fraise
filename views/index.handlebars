@@ -1,8 +1,68 @@
-<html>
+<!doctype html>
+<html lang = "en">
 <head>
-	<title>Test Page</title>
+	<title>fraise - learn conversational French</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/fraise.css" rel="stylesheet">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+	{{!-- <div class="jumbotron jumbotron-fluid">
+		<div class = "container">
+			<img src="/open-iconic/svg/chevron-left.svg">
+		</div>
+	</div> --}}
+	<nav class="navbar navbar-default bg-light">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">fraise</a>
+			</div>
+		{{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button> --}}
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="nav navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link disabled" href="#"><span class="glyphicon glyphicon-home"></span>Home<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item">
+						<a class="nav-link" href=""><span class="glyphicon glyphicon-tower"></span>Achievements</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><span class="glyphicon glyphicon-heart"></span>Favorites</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=""><span class="glyphicon glyphicon-user"></span>Profile</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" id="home-text">
+		<h1>Hello!</h1>
+		<h3>What would you like to talk about?</h3>
+		<br>
+		<br>
+	</div>
+
+	<div class="container" id="search-box">
+		<form id="search-form" role="form" method="get" action="/search">
+	    <div class="form-group">
+	      <label for="topic" id="search-prompt">Search</label>
+	      <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
+	    </div>
+	    {{!-- <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input> --}}
+	</form>
+
+
+	</div>
+
 </body>
 </html>
