@@ -1,6 +1,30 @@
-#home-text {
+
+.home-text {
     text-align: center;
 }
+
 #search-prompt {
     color:gray;
+}
+
+#search-box{
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.topic-row{
+    padding-left: 80px;
+    padding-right: 80px;
+    
+}
+
+.topic-row .column{
+    float:left;
+    width: 50%;
+    padding: 20px 60px;
+}
+
+.topic-row .btn {
+    font-size: 20px;
+    line-height: 4.5;
 }

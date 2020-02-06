@@ -45,24 +45,47 @@
 		</div>
 	</nav>
 
-	<div class="container" id="home-text">
-		<h1>Hello!</h1>
-		<h3>What would you like to talk about?</h3>
-		<br>
-		<br>
-	</div>
-
 	<div class="container" id="search-box">
+		<h1 class="home-text">Hello!</h1>
+		<h3 class="home-text">What would you like to talk about?</h3>
+		<br>
+		<br>
 		<form id="search-form" role="form" method="get" action="/search">
 	    <div class="form-group">
 	      <label for="topic" id="search-prompt">Search</label>
 	      <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
 	    </div>
 	    {{!-- <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input> --}}
-	</form>
-
-
+		</form>
 	</div>
 
+	<div class="row topic-row">
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">Help!</button>
+		</div>
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">Hobbies</button>
+		</div>
+	</div>
+	<div class="row topic-row">
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">Nature</button>
+		</div>
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">School</button>
+		</div>
+	</div>
+	<div class="row topic-row">
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">Lifestyle</button>
+		</div>
+		<div class="column">
+			<button type="button" class="btn btn-primary btn-block">Kitchen</button>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/home.js"></script>
 </body>
 </html>
