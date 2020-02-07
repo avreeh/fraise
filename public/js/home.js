@@ -11,12 +11,17 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	//$("#search-result").hide();
+	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
 }
 
-function listenerFunction(e)
+function searchListener(e)
 {
-	// e.preventDefault();
+	e.preventDefault();
+	var userQuery = $(this).text();
+	console.log(userQuery);
+	$("#search-result").text("No relevant lessons found. The feature is pending development!");
 	// var name = $(this).text();
 	// var newName = anagrammedName(name);
 	// console.log(newName);
