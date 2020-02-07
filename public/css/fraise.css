@@ -38,3 +38,27 @@
     width: 33%;
     padding: 20px 20px;
 }
+.topic-name-column{
+    float:left;
+    width: 50%;
+}
+.topic-search-column{
+    float:left;
+    width: 50%;
+}
+
+.phrase-pair{
+    padding: 20px 90px;
+}
+.phrase-pair p{
+    font-size: 20px;
+}
+
+.column-phrase {
+    float:left;
+    width: 90%;
+}
+.column-icon {
+    float:left;
+    width: 10%;
+}

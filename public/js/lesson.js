@@ -14,6 +14,8 @@ function initializePage() {
 	//$("#search-result").hide();
 	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
+	$(".glyphicon-pencil").click(pencilListener);
+	$(".glyphicon-heart").click(heartListener);
 }
 
 function searchListener(e)
@@ -26,4 +28,18 @@ function searchListener(e)
 	// var newName = anagrammedName(name);
 	// console.log(newName);
 	// $(this).text(newName);
+}
+
+function pencilListener(e)
+{
+	//e.preventDefault();
+	console.log("Entered toggle function.");
+	$(".french").toggle(200);
+	//$("p:nth-child(2)").toggle();
+}
+
+function heartListener(e)
+{
+	e.preventDefault();
+	$(this).css("color", "red");
 }
