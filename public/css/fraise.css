@@ -1,3 +1,9 @@
+body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
+
+.nav-item {
+    font-size: 30px;
+    padding-right: 15px;
+}
 
 .title-text {
     text-align: center;
