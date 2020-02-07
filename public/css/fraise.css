@@ -1,5 +1,5 @@
 
-.home-text {
+.title-text {
     text-align: center;
 }
 
@@ -14,8 +14,7 @@
 
 .topic-row{
     padding-left: 80px;
-    padding-right: 80px;
-    
+    padding-right: 80px;  
 }
 
 .topic-row .column{
@@ -27,4 +26,15 @@
 .topic-row .btn {
     font-size: 20px;
     line-height: 4.5;
+}
+
+.achievement-row{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.achievement-row .column{
+    float:left;
+    width: 33%;
+    padding: 20px 20px;
 }
