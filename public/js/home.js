@@ -13,6 +13,7 @@ function initializePage() {
 	console.log("Javascript connected!");
 	//$("#search-result").hide();
 	$("#search-form").submit(searchListener);
+	$(".help").click(helpListener);
 	// $(".name a").click(listenerFunction);
 }
 
@@ -26,4 +27,11 @@ function searchListener(e)
 	// var newName = anagrammedName(name);
 	// console.log(newName);
 	// $(this).text(newName);
+}
+
+function helpListener(e)
+{
+	e.preventDefault();
+	alert("Welcome to fraise, the French learning app that caters to you! Begin by typing some keywords in the search box, "
+	+ "or select one of the recommended topics below. At any time, you may check your progress using links at the top of the page.");
 }

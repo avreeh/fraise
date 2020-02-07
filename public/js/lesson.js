@@ -16,6 +16,7 @@ function initializePage() {
 	// $(".name a").click(listenerFunction);
 	$(".glyphicon-pencil").click(pencilListener);
 	$(".glyphicon-heart").click(heartListener);
+	$(".help").click(helpListener);
 }
 
 function searchListener(e)
@@ -32,7 +33,7 @@ function searchListener(e)
 
 function pencilListener(e)
 {
-	//e.preventDefault();
+	e.preventDefault();
 	console.log("Entered toggle function.");
 	$(".french").toggle(200);
 	//$("p:nth-child(2)").toggle();
@@ -42,4 +43,11 @@ function heartListener(e)
 {
 	e.preventDefault();
 	$(this).css("color", "red");
+}
+
+function helpListener(e)
+{
+	e.preventDefault();
+	alert("Please review the phrases on this page. To practice memorization, tap the Pencil icon to toggle the French phrase."
+	+ " To save a phrase for later, tap the Heart icon.");
 }
