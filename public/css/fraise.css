@@ -1,5 +1,9 @@
 body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 
+.navbar-brand {
+    margin: auto;
+}
+
 .nav-item {
     font-size: 30px;
     padding-right: 15px;
@@ -71,4 +75,14 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 .column-icon {
     float:left;
     width: 10%;
+}
+
+.phrase-button {
+    font-size: 20px;
+    height: auto;
+    width: 60%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    overflow:auto;
 }

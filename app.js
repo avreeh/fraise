@@ -14,6 +14,7 @@ var achievements = require('./routes/achievements');
 var favorites = require('./routes/favorites');
 var profile = require('./routes/profile');
 var lesson = require('./routes/lesson');
+var practice = require('./routes/practice');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +47,7 @@ app.get('/achievements', achievements.view);
 app.get('/favorites', favorites.view);
 app.get('/profile', profile.view);
 app.get('/lesson', lesson.view);
+app.get('/practice', practice.view);
 // Example route
 // app.get('/users', user.list);
 

@@ -17,6 +17,7 @@ function initializePage() {
 	$(".glyphicon-pencil").click(pencilListener);
 	$(".glyphicon-heart").click(heartListener);
 	$(".help").click(helpListener);
+	$(".phrase-button").click(phraseFlip);
 }
 
 function searchListener(e)
@@ -50,4 +51,10 @@ function helpListener(e)
 	e.preventDefault();
 	alert("Please review the phrases on this page. To practice memorization, tap the Pencil icon to toggle the French phrase."
 	+ " To save a phrase for later, tap the Heart icon.");
+}
+
+function phraseFlip(e)
+{
+	e.preventDefault();
+	$(this).html("<p>Some English translation</p><span class='glyphicon glyphicon-heart'></span>");
 }
