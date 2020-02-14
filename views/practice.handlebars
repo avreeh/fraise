@@ -38,17 +38,20 @@
 	<br>
 	<br>
 	<br>
-	<h5 class='text-center'>Tap to reveal translation</h5>
+	<div class="container text-center">
+		<h5>Tap to reveal translation</h5>
 
-	{{#each phrases}}
-	<div class="container">
-		<a href="#"><button type="button" class="btn btn-primary btn-block phrase-button">{{french}}
-			<br><span class="glyphicon glyphicon-heart"></span>
-		</button><a>
+		{{#each phrases-single}}
+		<div class="container">
+			<a href="#"><button type="button" class="btn btn-primary btn-block phrase-button">{{french}}
+				{{!-- <br><span class="glyphicon glyphicon-heart"></span> --}}
+			</button></a>
+		</div>
+		<br>
+		{{/each}}
+		<br>
+		<p>Take a Quiz</p>
+		<h1><a href="quiz"><span class="glyphicon glyphicon-circle-arrow-right"></span></a></h1>
 	</div>
-	<br>
-	{{/each}}
-
-
 </body>
 </html>

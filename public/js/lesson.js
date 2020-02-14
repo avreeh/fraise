@@ -57,7 +57,7 @@ function helpListener(e)
 function phraseFlip(e)
 {
 	e.preventDefault();
-	$(this).html("<p>Some English translation</p><span class='glyphicon glyphicon-heart'></span>");
+	$(this).html("<p>I need help getting home.</p>");
 }
 
 function choiceListener(e)

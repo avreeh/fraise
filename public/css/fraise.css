@@ -1,5 +1,10 @@
 body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 
+.container {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .navbar-brand {
     margin: auto;
 }
@@ -81,8 +86,8 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
     font-size: 20px;
     height: auto;
     width: 60%;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin: auto;
     overflow:auto;
 }

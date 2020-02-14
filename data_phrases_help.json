@@ -24,5 +24,13 @@
 			"liked": false,
 			"learned": false
 		}
+	],
+	"phrases-single": [
+		{
+			"english": "I need help getting home.",
+			"french": "J'ai besoin d'aide pour rentrer à la maison.",
+			"liked": false,
+			"learned": false
+		}
 	]
 }
