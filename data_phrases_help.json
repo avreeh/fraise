@@ -1,0 +1,28 @@
+{
+	"phrases": [
+		{
+			"english": "Where is the nearest bathroom?",
+			"french": "Où est la salle de bain la plus proche?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I need help getting home.",
+			"french": "J'ai besoin d'aide pour rentrer à la maison.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I really need food.",
+			"french": "J'ai vraiment besoin de nourriture.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "How do you say _______?",
+			"french": "Comment dites-vous _______?",
+			"liked": false,
+			"learned": false
+		}
+	]
+}

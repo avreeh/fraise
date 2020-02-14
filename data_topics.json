@@ -1,0 +1,46 @@
+{
+	"topics": [
+		{
+			"name": "Help!",
+			"description": "Asking for help",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		},
+		{
+			"name": "Hobbies",
+			"description": "Sharing your favorite to-dos",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		},
+		{
+			"name": "Nature",
+			"description": "Appreciating the natural world",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		},
+		{
+			"name": "School",
+			"description": "Chatting about your classes",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		},
+		{
+			"name": "Lifestyle",
+			"description": "What else do you want people to know about you?",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		},
+		{
+			"name": "Kitchen",
+			"description": "Describing the art of cooking",
+			"numPhrases": 1,
+			"numPhrasesCompleted": 0,
+			"imageURL": "#"
+		}
+	]
+}

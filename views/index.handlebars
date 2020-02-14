@@ -3,12 +3,14 @@
 <head>
 	<title>fraise - learn conversational French</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/home.js"></script>
-	<script src="js/bootstrap.js"></script>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="css/fraise.css" rel="stylesheet">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/bootstrap.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top bg-light">
@@ -57,33 +59,13 @@
 		<p id="search-result"></p> <!-- this will change dynamically as defined in home.js -->
 	</div>
 
+	{{#each topics}}
 	<div class="row topic-row">
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">Help!</button></a>
-		</div>
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">Hobbies</button></a>
+		<div class="column" id={{name}}>
+			<a href="lesson"><button type="button" class="btn btn-primary btn-block">{{name}}</button></a>
 		</div>
 	</div>
-	<div class="row topic-row">
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">Nature</button></a>
-		</div>
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">School</button></a>
-		</div>
-	</div>
-	<div class="row topic-row">
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">Lifestyle</button></a>
-		</div>
-		<div class="column">
-			<a href="lesson"><button type="button" class="btn btn-primary btn-block">Kitchen</button></a>
-		</div>
-	</div>
+	{{/each}}
 	
-	{{!-- <script src="js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/home.js"></script> --}}
 </body>
 </html>

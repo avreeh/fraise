@@ -60,11 +60,12 @@
 		<p id="search-result"></p> <!-- this will change dynamically as defined in home.js -->
 	</div>
 
+	{{#each phrases}}
 	<div class="container-fluid row phrase-pair">
 		<div class="column column-phrase">
-			<p class="english">Where is the nearest bathroom?</p>
+			<p class="english">{{english}}</p>
 			<br>
-			<p class="french">Où est la salle de bain la plus proche?</p>
+			<p class="french">{{french}}</p>
 			<br>
 		</div>
 		<div class="column column-icon">
@@ -73,7 +74,8 @@
 		</div>
 	</div>
 	<hr>
-	<div class="container-fluid row phrase-pair">
+	{{/each}}
+	{{!-- <div class="container-fluid row phrase-pair">
 		<div class="column column-phrase">
 			<p class="english">I need help getting home.</p>
 			<br>
@@ -110,7 +112,7 @@
 			<p><span class="glyphicon glyphicon-pencil"></span></p><br>
 			<p><span class="glyphicon glyphicon-heart"></span></p>
 		</div>
-	</div>
+	</div> --}}
 	
 	{{!-- <script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
