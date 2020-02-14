@@ -15,6 +15,7 @@ var favorites = require('./routes/favorites');
 var profile = require('./routes/profile');
 var lesson = require('./routes/lesson');
 var practice = require('./routes/practice');
+var quiz = require('./routes/quiz');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,6 +49,7 @@ app.get('/favorites', favorites.view);
 app.get('/profile', profile.view);
 app.get('/lesson', lesson.view);
 app.get('/practice', practice.view);
+app.get('/quiz', quiz.view);
 // Example route
 // app.get('/users', user.list);
 

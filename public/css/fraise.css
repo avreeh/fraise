@@ -86,3 +86,13 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
     margin: auto;
     overflow:auto;
 }
+
+.choice-button {
+    font-size: 20px;
+    height: auto;
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+    overflow:auto;
+}

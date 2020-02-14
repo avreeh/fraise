@@ -11,13 +11,14 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	//$("#search-result").hide();
+	$("#next-button").hide();
 	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
 	$(".glyphicon-pencil").click(pencilListener);
 	$(".glyphicon-heart").click(heartListener);
 	$(".help").click(helpListener);
 	$(".phrase-button").click(phraseFlip);
+	$(".choice-button").click(choiceListener);
 }
 
 function searchListener(e)
@@ -57,4 +58,21 @@ function phraseFlip(e)
 {
 	e.preventDefault();
 	$(this).html("<p>Some English translation</p><span class='glyphicon glyphicon-heart'></span>");
+}
+
+function choiceListener(e)
+{
+	e.preventDefault();
+	var buttonText = $(this).text();
+	console.log(buttonText);
+	if (buttonText == "I need help getting home.") {
+		$(this).text("Correct!");
+		$(".progress-bar").attr('aria-valuenow', "0");
+		$(".progress-bar").attr('style', "width: 100%;");
+		$(".progress-bar").text('100%');
+		$("#next-button").show();
+	} else {
+		$(this).text("Try again!");
+	}
+	
 }
