@@ -3,32 +3,32 @@
 		{
 			"myUsername": "AS",
 			"myPwd": "datascience",
-			"myTextArea": 1,
+			"myTextArea": 1
 		},
 		{
 			"myUsername": "KC",
 			"myPwd": "cognitivescience",
-			"myTextArea": 1,
+			"myTextArea": 1
 		},
 		{
 			"myUsername": "HZ",
 			"myPwd": "computerscience",
-			"myTextArea": 1,
+			"myTextArea": 1
 		},
 		{
 			"myUsername": "Ummm",
 			"myPwd": "idk",
-			"myTextArea": 1,
+			"myTextArea": 1
 		},
 		{
 			"myUsername": "e",
 			"myPwd": "val",
-			"myTextArea": 1,
+			"myTextArea": 1
 		},
 		{
 			"myUsername": "who is",
 			"myPwd": "asking",
-			"myTextArea": 1,
+			"myTextArea": 1
 		}
 	]
 }
