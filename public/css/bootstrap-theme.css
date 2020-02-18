@@ -60,24 +60,24 @@
 }
 
 .btn-primary {
-  background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
-  background-image: linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
+  background-image: -webkit-linear-gradient(top,#FF8EA4 0%, #ED4255 100%);
+  background-image: linear-gradient(to bottom, #FF8EA4 0%, #ED4255 100%);
   background-repeat: repeat-x;
-  border-color: #2b669a;
+  border-color:#FF8EA4;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #2d6ca2;
+  background-color: #ED4255;
   background-position: 0 -15px;
 }
 
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #2d6ca2;
-  border-color: #2b669a;
+  background-color: #ED4255;
+  border-color: #ED4255;
 }
 
 .btn-success {
@@ -191,7 +191,7 @@
 
 .navbar-default {
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  background-image: linear-gradient(to bottom, #7AC9AB 0%, #7AC9AB 100%);
   background-repeat: repeat-x;
   border-radius: 4px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);

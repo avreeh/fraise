@@ -1,29 +1,29 @@
 {
 	"topics": [
 		{
-			"name": "Help!",
+			"name": "Requests",
 			"description": "Asking for help",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#"
 		},
 		{
-			"name": "Hobbies",
-			"description": "Sharing your favorite to-dos",
+			"name": "Family",
+			"description": "Ask how the family is",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#"
 		},
 		{
-			"name": "Nature",
-			"description": "Appreciating the natural world",
+			"name": "Eating",
+			"description": "Phrases to use when eating our",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#"
 		},
 		{
-			"name": "School",
-			"description": "Chatting about your classes",
+			"name": "Love",
+			"description": "This is the love language",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#"
@@ -36,8 +36,8 @@
 			"imageURL": "#"
 		},
 		{
-			"name": "Kitchen",
-			"description": "Describing the art of cooking",
+			"name": "School",
+			"description": "Chatting about your classes",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#"

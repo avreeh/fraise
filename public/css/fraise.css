@@ -24,6 +24,7 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 
 #search-box{
     padding-left: 140px;
+    align-items: center;
     padding-right: 140px;
 }
 
@@ -34,17 +35,18 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 }
 
 .topic-row .column{
-    float:left;
+    float: center;
     width: 100%;
-    padding: 20px 20px;
+    padding: 15px 5px;
     align-items: center;
 }
 
 .topic-row .btn {
     font-size: 20px;
     line-height: 4.5;
-    width: 60%;
+    width: 80%;
     margin: auto;
+    margin-bottom: 15px;
 }
 
 .achievement-row{
@@ -67,10 +69,12 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 }
 
 .phrase-pair{
-    padding: 20px 90px;
+    padding-left: 5px;
+    padding: 20px 20px;
 }
 .phrase-pair p{
     font-size: 20px;
+    margin-left: 10px;
 }
 
 .column-phrase {
@@ -100,4 +104,24 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
     padding-bottom: 30px;
     margin: auto;
     overflow:auto;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.lessonName {
+    background-color: #FF8EA4;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.help {
+    content: "images/help.png"
 }
