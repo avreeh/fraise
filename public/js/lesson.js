@@ -19,6 +19,11 @@ function initializePage() {
 	$(".help").click(helpListener);
 	$(".phrase-button").click(phraseFlip);
 	$(".choice-button").click(choiceListener);
+	$("#0, #indicator0").addClass("active");
+	$('.carousel').carousel({
+		wrap: false,
+		interval: false
+	})
 }
 
 function searchListener(e)

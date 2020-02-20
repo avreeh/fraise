@@ -1,4 +1,6 @@
-body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
+body { 
+    padding-top: 70px; 
+} /* needed to prevent navbar overlaying body */
 
 .container {
     margin-left: 0px;
