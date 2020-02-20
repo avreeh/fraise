@@ -161,6 +161,7 @@ h1 {
     background-color: rgb(255, 255, 255);
   }
   
+  /*adjusts image sizes*/
   .frenchtoggle img {
       height: 20px;
   }
@@ -171,4 +172,9 @@ h1 {
 
   .achievescreen img {
     height: 300px;
+  }
+
+  
+  .achievementlist img {
+      height: 40px;
   }
