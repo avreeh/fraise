@@ -1,0 +1,41 @@
+{
+	"phrases": [
+		{
+			"english": "I love you.",
+			"french": "Je t'aime.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "You look beautiful.",
+			"french": "Vous êtes belle.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "You mean a lot to me.",
+			"french": "Je t’aime beaucoup.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I would love to spend more time with you.",
+			"french": "J’aimerais passer plus de temps avec toi",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "I would love to invite you to dinner.",
+			"french": "J’aimerais t’inviter à dîner",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "You make me so happy.",
+			"french": "Tu me rends tellement heureux.",
+			"liked": false,
+			"learned": false
+        }
+	]
+	
+}

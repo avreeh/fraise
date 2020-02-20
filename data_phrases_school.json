@@ -1,0 +1,35 @@
+{
+	"phrases": [
+		{
+			"english": "What is your major?",
+			"french": "Quelle est ta majeure?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "What is your favorite class?",
+			"french": "Quelle est ta classe préférée?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I go to university of california san diego.",
+			"french": "Je vais à l'université de californie san diego.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I don't know what I'm doing with my life.",
+			"french": "Je ne sais pas ce que je fais de ma vie.",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "I am in the french club at school.",
+			"french": "Je suis dans le club francais a l'ecole.",
+			"liked": false,
+			"learned": false
+        }
+	]
+	
+}
