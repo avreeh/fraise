@@ -17,6 +17,7 @@ var lesson = require('./routes/lesson');
 var practice = require('./routes/practice');
 var quiz = require('./routes/quiz');
 var levelup = require('./routes/levelup');
+var topic = require('./routes/topic');
 // Example route
 // var user = require('./routes/user');
 
@@ -52,6 +53,7 @@ app.get('/lesson', lesson.view);
 app.get('/practice', practice.view);
 app.get('/quiz', quiz.view);
 app.get('/levelup', levelup.view);
+app.get('/topic/:id', topic.topicInfo);
 // Example route
 // app.get('/users', user.list);
 

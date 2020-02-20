@@ -1,8 +1,17 @@
 'use strict';
+var englishTranslations = []; // array of English translations read from the topic page (AJAX)
+var frenchTranslations = []; // array of French translations read from the topic page (AJAX)
+var lang = []; // the current displayed language (en/fr) for each phrase index
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	var topicName = "help";
+	$.get("/topic/" + topicName, initializePhrases);
+	// var text = localStorage.getItem('../data_phrases_help.json');
+	// console.log(text);
+	// phrases = JSON.parse(text);
+	// console.log(phrases);
 })
 
 
@@ -21,9 +30,23 @@ function initializePage() {
 	$(".choice-button").click(choiceListener);
 	$("#0, #indicator0").addClass("active");
 	$('.carousel').carousel({
-		wrap: false,
-		interval: false
+		interval: false // no auto "playing" of the carousel
 	})
+}
+
+function initializePhrases(result) {
+	// console.log(result);
+	var length = result['phrases'].length;
+	// console.log(length);
+	for(var i = 0; i < length; i++)
+	{
+		englishTranslations.push(result['phrases'][i]['english']);
+		frenchTranslations.push(result['phrases'][i]['french']);
+		lang.push("fr");
+	}
+	// console.log(englishTranslations);
+	// console.log(frenchTranslations);
+	// console.log(lang);
 }
 
 function searchListener(e)
@@ -43,7 +66,6 @@ function pencilListener(e)
 	e.preventDefault();
 	console.log("Entered toggle function.");
 	$(".french").toggle(200);
-	//$("p:nth-child(2)").toggle();
 }
 
 function heartListener(e)
@@ -62,7 +84,19 @@ function helpListener(e)
 function phraseFlip(e)
 {
 	e.preventDefault();
-	$(this).html("<p>I need help getting home.</p>");
+	var id = $(this).attr('id').substring(4); // sequence number
+	if (lang[id] == 'fr') // currently displaying French, flip it to English
+	{
+		var englishText = "<p>" + englishTranslations[id] + "</p>";
+		$(this).html(englishText);
+		lang[id] = 'en'; // set the current language to English
+	}
+	else if (lang[id] == 'en') // currently displaying French, flip it to English
+	{
+		var frenchText = "<p>" + frenchTranslations[id] + "</p>";
+		$(this).html(frenchText);
+		lang[id] = 'fr'; // set the current language to English
+	}
 }
 
 function choiceListener(e)

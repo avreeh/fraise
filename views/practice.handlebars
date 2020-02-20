@@ -18,28 +18,26 @@
     <a href="favorites"><img src="images/heart.png"></a> --}}
 	</div>
 
-	<br>
-	<br>
-	<br>
 	<div class="container text-center">
+		<br>
+		<h2>Practice</h2>
+		<br>
+		<br>
+		<br>
+		<br>
 		<h5>Tap to reveal translation</h5>
 
 		<div id="phraseCarousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				{{!-- <li data-target="#phraseCarousel" data-slide-to="0" class="active"></li> --}}
 				{{#each phrases}}
 					<li data-target="#phraseCarousel" data-slide-to="{{@index}}" id="indicator{{@index}}"></li>
 				{{/each}}
 			</ol>
 			<div class="carousel-inner">
-				{{!-- <div class="carousel-item item active">
-					<a href="#"><button type="button" class="btn btn-primary btn-block phrase-button" id="0">
-						{{phrases.[0].french}}</button></a>
-				</div> --}}
 				{{#each phrases}}
 				<div class="carousel-item item" id="{{@index}}">
-					<a href="#"><button type="button" class="btn btn-primary btn-block phrase-button" id="card{{@index}}">
-						{{french}}</button></a>
+					<p><a href="#"><button type="button" class="btn btn-primary btn-block phrase-button" id="card{{@index}}">
+						{{french}}</button></a></p>
 				</div>
 				{{/each}}
 			</div>
@@ -61,6 +59,10 @@
 		</div>
 		<br>
 		{{/each}} --}}
+		<br>
+		<br>
+		<br>
+		<br>
 		<br>
 		<p>Take a Quiz</p>
 		<h1><a href="quiz" class="icon"><img src="images/forward.png"></a></h1>
