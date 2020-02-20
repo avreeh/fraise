@@ -14,7 +14,7 @@ function initializePage() {
 	$("#next-button").hide();
 	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
-	$(".glyphicon-pencil").click(pencilListener);
+	$(".frenchtoggle").click(pencilListener);
 	$(".glyphicon-heart").click(heartListener);
 	$(".help").click(helpListener);
 	$(".phrase-button").click(phraseFlip);

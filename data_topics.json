@@ -5,42 +5,48 @@
 			"description": "Asking for help",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "lesson"
 		},
 		{
 			"name": "Family",
 			"description": "Ask how the family is",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "family"
 		},
 		{
-			"name": "Eating",
+			"name": "Dining",
 			"description": "Phrases to use when eating our",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "dining"
 		},
 		{
 			"name": "Love",
-			"description": "This is the love language",
+			"description": "This is the love language afterall",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "love"
 		},
 		{
 			"name": "Lifestyle",
 			"description": "What else do you want people to know about you?",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "lifestyle"
 		},
 		{
 			"name": "School",
 			"description": "Chatting about your classes",
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
-			"imageURL": "#"
+			"imageURL": "#",
+			"href": "school"
 		}
 	]
 }

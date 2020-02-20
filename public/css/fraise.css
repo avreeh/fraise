@@ -1,24 +1,24 @@
-body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
+/* body { padding-top: 70px; } needed to prevent navbar overlaying body */
 
 .container {
     margin-left: 0px;
     margin-right: 0px;
 }
 
-.navbar-brand {
+/* .navbar-brand {
     margin: auto;
 }
 
 .nav-item {
     font-size: 30px;
     padding-right: 15px;
-}
+} */
 
 .title-text {
     text-align: center;
 }
 
-#search-prompt {
+/* #search-prompt {
     color:gray;
 }
 
@@ -26,7 +26,7 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
     padding-left: 140px;
     align-items: center;
     padding-right: 140px;
-}
+} */
 
 .topic-row{
     margin: auto;
@@ -87,9 +87,9 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 }
 
 .phrase-button {
-    font-size: 20px;
+    font-size: 15px;
     height: auto;
-    width: 60%;
+    width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
     margin: auto;
@@ -99,7 +99,7 @@ body { padding-top: 70px; } /* needed to prevent navbar overlaying body */
 .choice-button {
     font-size: 20px;
     height: auto;
-    width: 60%;
+    width: 85%;
     padding-top: 30px;
     padding-bottom: 30px;
     margin: auto;
@@ -125,3 +125,50 @@ h1 {
 .help {
     content: "images/help.png"
 }
+
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: #7AC9AB;
+    overflow: auto;
+  }
+  
+  .navbar img{
+    height: 40px;
+  }
+
+  /* Navbar links */
+  .navbar a {
+    float: right;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar .left{
+      float: left;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: rgb(27, 56, 47);
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .frenchtoggle img {
+      height: 20px;
+  }
+
+  .icon img {
+      height: 40px;
+  }
+
+  .achievescreen img {
+    height: 300px;
+  }

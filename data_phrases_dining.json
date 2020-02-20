@@ -1,0 +1,35 @@
+{
+	"phrases": [
+		{
+			"english": "The menu, please.",
+			"french": "La carte, s’il vous plaît",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "What would you like to eat?",
+			"french": "Que voudriez-vous manger?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I would like some water.",
+			"french": "J’aimerais de l’eau.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I am allergic to peanuts.",
+			"french": "Je suis allergique aux arachides.",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "Do you have some vegan options?",
+			"french": "Avez-vous des options végétaliennes?",
+			"liked": false,
+			"learned": false
+        }
+	]
+	
+}

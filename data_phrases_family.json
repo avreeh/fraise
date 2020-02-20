@@ -1,0 +1,41 @@
+{
+	"phrases": [
+		{
+			"english": "How is your family doing??",
+			"french": "Comment va ta famille aujourd'hui?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "How many siblings do you have?",
+			"french": "Combien de frères et sœurs as-tu?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "My family is doing well, what about yours?",
+			"french": "Ma famille se porte très bien, qu'en est-il de la vôtre?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Do you have any pets?",
+			"french": "Avez-vous des animaux domestiques?",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "I have a dog named Strawberry.",
+			"french": "J'ai un chien nommé Fraise.",
+			"liked": false,
+			"learned": false
+        },
+        {
+			"english": "I am the youngest in my family.",
+			"french": "Je suis le plus jeune dans ma famille.",
+			"liked": false,
+			"learned": false
+		}
+	]
+	
+}
