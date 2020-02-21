@@ -1,41 +1,41 @@
 {
 	"phrases": [
 		{
-			"english": "I love you.",
-			"french": "Je t'aime.",
+			"english": "Where are the best bars?",
+			"french": "Où se trouvent les meilleurs bars ?",
 			"liked": false,
 			"learned": false
 		},
 		{
-			"english": "You look beautiful.",
-			"french": "Vous êtes belle.",
+			"english": "Do you have any rooms available?",
+			"french": "Avez-vous des chambres libres ?",
 			"liked": false,
 			"learned": false
 		},
 		{
-			"english": "You mean a lot to me.",
-			"french": "Je t’aime beaucoup.",
+			"english": "Do you have this in my size?",
+			"french": "Avez-vous ceci dans ma taille ?",
 			"liked": false,
 			"learned": false
 		},
 		{
-			"english": "I would love to spend more time with you.",
-			"french": "J’aimerais passer plus de temps avec toi",
+			"english": "That's too expensive.",
+			"french": "C'est trop cher.",
 			"liked": false,
 			"learned": false
         },
         {
-			"english": "I would love to invite you to dinner.",
-			"french": "J’aimerais t’inviter à dîner",
+			"english": "I am in France for ten days.",
+			"french": "Je reste en France pendant dix jours.",
 			"liked": false,
 			"learned": false
         },
         {
-			"english": "You make me so happy.",
-			"french": "Tu me rends tellement heureux.",
+			"english": "It takes an hour and a half.",
+			"french": "Cela dure une heure et demie.",
 			"liked": false,
 			"learned": false
         }
 	]
-	
+
 }
