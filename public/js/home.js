@@ -11,10 +11,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	//$("#search-result").hide();
+	$("#addFriendForm").hide();
 	$("#search-form").submit(searchListener);
-	$(".help").click(helpListener);
-	// $(".name a").click(listenerFunction);
+	$("#indexHelp").click(indexHelpListener);
+	$('#profileHelp').click(profileHelpListener);
+	$('#favoritesHelp').click(favoritesHelpListener);
+	$('#addFriendButton').click(addFriendFormOpen);
 }
 
 function searchListener(e)
@@ -29,9 +31,27 @@ function searchListener(e)
 	// $(this).text(newName);
 }
 
-function helpListener(e)
+function indexHelpListener(e)
 {
 	e.preventDefault();
-	alert("Welcome to fraise, the French learning app that caters to you! Begin by typing some keywords in the search box, "
-	+ "or select one of the recommended topics below. At any time, you may check your progress using links at the top of the page.");
+	alert("Welcome to fraise, the French learning app that caters to you! Begin by selecting one of the recommended topics below.");
+}
+
+function profileHelpListener(e)
+{
+	e.preventDefault();
+	alert("On this page, you can view your achievements, status, and friends. You can also add new friends.");
+}
+
+function favoritesHelpListener(e)
+{
+	e.preventDefault();
+	alert("On this page, you can view the phrases that you have favorited.");
+}
+
+function addFriendFormOpen(e)
+{
+	e.preventDefault();
+	$("#addFriendForm").show();
+	$('#addFriendButton').hide();
 }

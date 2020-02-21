@@ -30,7 +30,8 @@ function initializePage() {
 	// $(".name a").click(listenerFunction);
 	$(".frenchtoggle").click(pencilListener);
 	$(".glyphicon-heart").click(heartListener);
-	$(".help").click(helpListener);
+	$("#lessonHelp").click(lessonHelpListener);
+	$("#practiceHelp").click(practiceHelpListener);
 	$(".phrase-button").click(phraseFlip);
 	$(".choice-button").click(choiceListener);
 	$("#0, #indicator0").addClass("active"); // for practice screen only
@@ -110,11 +111,18 @@ function heartListener(e)
 	$(this).css("color", "red");
 }
 
-function helpListener(e)
+function lessonHelpListener(e)
 {
 	e.preventDefault();
-	alert("Please review the phrases on this page. To practice memorization, tap the Pencil icon to toggle the French phrase."
+	alert("Review the phrases on this page. To practice memorization, tap the ... icon to toggle the French phrase."
 	+ " To save a phrase for later, tap the Heart icon.");
+}
+
+function practiceHelpListener(e)
+{
+	e.preventDefault();
+	alert("Scroll through each phrase and click to toggle between English and French. " +
+	"Click on the forward button at the bottom when you're ready for the quiz");
 }
 
 function phraseFlip(e)

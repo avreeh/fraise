@@ -1,0 +1,22 @@
+{
+	"profiles": [
+		{
+			"myUsername": "Alisha",
+			"myPwd": "datascience",
+			"myTextArea": 1,
+			"myEmail": "unknown"
+		},
+		{
+			"myUsername": "Kara",
+			"myPwd": "cognitivescience",
+			"myTextArea": 1,
+			"myEmail": "unknown"
+		},
+		{
+			"myUsername": "Henry",
+			"myPwd": "computerscience",
+			"myTextArea": 1,
+			"myEmail": "unknown"
+		}
+	]
+}

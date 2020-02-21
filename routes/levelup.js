@@ -1,8 +1,9 @@
-var profiles = require('../profiles.json');
+// var profiles = require('../profiles.json');
 /*
  * GET home page.
  */
 
 exports.view = function(req, res){
-  res.render('levelup', profiles);
+  res.render('levelup');
+  // res.render('levelup', profiles);
 };

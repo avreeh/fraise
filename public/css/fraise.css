@@ -179,3 +179,7 @@ h1 {
   .achievementlist img {
       height: 40px;
   }
+
+  .img-responsive {
+      height: 120px;
+  }

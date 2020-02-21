@@ -1,24 +1,19 @@
-var users = require('../profiles.json');
+var users = require('../data_friends.json');
 /*
  * GET home page.
  */
 
 exports.view = function(req, res){
-  res.render('profile');
-};
-
-exports.view = function(req, res){
-  //res.json(topics);
   res.render('profile', users);
 };
 
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+// function openForm() {
+//   document.getElementById("myForm").style.display = "block";
+// }
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }
 
 // $(function () {
 //   $('.pop-button').popover({

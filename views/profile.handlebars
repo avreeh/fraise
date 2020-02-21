@@ -14,7 +14,7 @@
 <body>
 	<div class="navbar">
 	<a href="index" class="left"><img src="images/back.png"></a>
-	<a href="#" class="left nav-item help"><img src="images/help.png"></a>
+	<a href="#" class="left nav-item help" id="profileHelp"><img src="images/help.png"></a>
     <a href="profile"><img src="images/profile.png"></a>
     <a href="favorites"><img src="images/heart.png"></a>
 	</div>
@@ -99,14 +99,29 @@
 		<h4>Achievements</h4>
 		<img src="images/achievementlist.png">
 		<p>Days active: 1</p>
-		<p>Lessons completed: 0</p>
-		<p>Phrases completed: 0</p>
+		<p>Lessons completed: 1</p>
+		<p>Quizzes passed: 1</p>
 		<p>Global rank: 99</p>
 		</div>
 		<br>
+		<h4>Friends   <button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button></h4>
+		{{#each profiles}}
+		<p>{{myUsername}}<span class="badge badge-primary"> LVL {{myTextArea}}</span></p>
+		{{/each}}
 		<br>
-		<h4>Friends</h4>
-		<p>bigbaguette</p>
+		
+		<form id="addFriendForm" role="form" method="get" action="/add">
+			<h4>Add a friend by username or email</h4>
+			<div class="form-group">
+			<label for="name">Username:</label>
+			<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+			</div>
+			<div class="form-group">
+			<label for="description">Email:</label>
+			<input type="text" class="form-control" id="description" placeholder="Description" name="description">
+			</div>
+			<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
+		</form>
 	</div>
 
 	{{!-- <script src="js/jquery-1.11.0.js"></script>
