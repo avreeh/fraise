@@ -49,9 +49,9 @@ app.get('/search', search.search);
 app.get('/achievements', achievements.view);
 app.get('/favorites', favorites.view);
 app.get('/profile', profile.view);
-app.get('/lesson', lesson.view);
-app.get('/practice', practice.view);
-app.get('/quiz', quiz.view);
+app.get('/lesson/:id', lesson.view);
+app.get('/practice/:id', practice.view);
+app.get('/quiz/:id', quiz.view);
 app.get('/levelup', levelup.view);
 app.get('/topic/:id', topic.topicInfo);
 // Example route

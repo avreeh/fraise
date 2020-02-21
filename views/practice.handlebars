@@ -3,17 +3,17 @@
 <head>
 	<title>fraise - learn conversational French</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/lesson.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/fraise.css" rel="stylesheet">
+	<script src="../js/jquery-1.11.0.js"></script>
+	<script src="../js/lesson.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/fraise.css" rel="stylesheet">
 </head>
 <body>
 	<div class="navbar">
-	<a href="lesson" class="left"><img src="images/exit.png"></a>
-	<a href="#" class="left nav-item help"><img src="images/help.png"></a>
+	<a id="lessonLink" href="#" class="left"><img src="../images/exit.png"></a>
+	<a href="#" class="left nav-item help"><img src="../images/help.png"></a>
     {{!-- <a href="profile"><img src="images/profile.png"></a>
     <a href="favorites"><img src="images/heart.png"></a> --}}
 	</div>
@@ -21,6 +21,7 @@
 	<div class="container text-center">
 		<br>
 		<h2>Practice</h2>
+		<h4 id="topicName"></h4>
 		<br>
 		<br>
 		<br>
@@ -65,7 +66,7 @@
 		<br>
 		<br>
 		<p>Take a Quiz</p>
-		<h1><a href="quiz" class="icon"><img src="images/forward.png"></a></h1>
+		<h1><a href="quiz" class="icon"><img src="../images/forward.png"></a></h1>
 	</div>
 </body>
 </html>
