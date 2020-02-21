@@ -1,12 +1,14 @@
 'use strict';
+var topicName; // current topic name for lesson overview/practice/quiz
 var englishTranslations = []; // array of English translations read from the topic page (AJAX)
 var frenchTranslations = []; // array of French translations read from the topic page (AJAX)
 var lang = []; // the current displayed language (en/fr) for each phrase index
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+	topicName = getTopic();
+	console.log(topicName);
 	initializePage();
-	var topicName = "help";
 	$.get("/topic/" + topicName, initializePhrases);
 	// var text = localStorage.getItem('../data_phrases_help.json');
 	// console.log(text);
@@ -14,13 +16,16 @@ $(document).ready(function() {
 	// console.log(phrases);
 })
 
-
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$("#next-button").hide();
+	$("#next-button").hide(); // for quiz screen only
+	$("#topicName").text(topicName.toUpperCase());
+	$("#practiceButton").attr("href", "../practice/" + topicName); // dynamic links on lesson page
+	$("#quizButton").attr("href", "../quiz/" + topicName); // dynamic links on lesson page
+	$("#lessonLink").attr("href", "../lesson/" + topicName); // dynamic links on lesson page
 	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
 	$(".frenchtoggle").click(pencilListener);
@@ -28,10 +33,41 @@ function initializePage() {
 	$(".help").click(helpListener);
 	$(".phrase-button").click(phraseFlip);
 	$(".choice-button").click(choiceListener);
-	$("#0, #indicator0").addClass("active");
+	$("#0, #indicator0").addClass("active"); // for practice screen only
 	$('.carousel').carousel({
 		interval: false // no auto "playing" of the carousel
 	})
+}
+
+function getTopic() {
+	var url = window.location.href;
+	if(url.search("requests") != -1)
+	{
+		return "requests";
+	}
+	else if (url.search("lifestyle") != -1)
+	{
+		return "lifestyle";
+	}
+	else if (url.search("dining") != -1)
+	{
+		return "dining";
+	}
+	else if (url.search("family") != -1)
+	{
+		return "family";
+	}
+	else if (url.search("love") != -1)
+	{
+		return "love";
+	}
+	else if (url.search("school") != -1)
+	{
+		return "school";
+	} 
+	else {
+		//
+	}
 }
 
 function initializePhrases(result) {

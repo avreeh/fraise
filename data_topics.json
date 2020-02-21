@@ -6,7 +6,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "lesson"
+			"href": "lesson/requests"
 		},
 		{
 			"name": "Family",
@@ -14,7 +14,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "family"
+			"href": "lesson/family"
 		},
 		{
 			"name": "Dining",
@@ -22,7 +22,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "dining"
+			"href": "lesson/dining"
 		},
 		{
 			"name": "Love",
@@ -30,7 +30,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "love"
+			"href": "lesson/love"
 		},
 		{
 			"name": "Lifestyle",
@@ -38,7 +38,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "lifestyle"
+			"href": "lesson/lifestyle"
 		},
 		{
 			"name": "School",
@@ -46,7 +46,7 @@
 			"numPhrases": 1,
 			"numPhrasesCompleted": 0,
 			"imageURL": "#",
-			"href": "school"
+			"href": "lesson/school"
 		}
 	]
 }
