@@ -109,6 +109,8 @@ function heartListener(e)
 {
 	e.preventDefault();
 	$(this).css("color", "red");
+	var id = $(this).attr('id').substring(5); // sequence number
+	
 }
 
 function lessonHelpListener(e)

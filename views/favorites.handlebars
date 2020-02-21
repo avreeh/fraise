@@ -21,16 +21,18 @@
 	<div class="container">
 		<h1 class="title-text">Favorites</h1>
 		<br>
-		<h4>Your favorite lessons</h4>
-		<ul>
-			<li>Issues at the hotel</li>
-			<li>At the train station</li>
-		</ul>
-		<h4>Your favorite phrases</h4>
-		<ul>
-			<li>J'aime les fraises francaises!</li>
-			<li>J'ai besoin de...</li>
-		</ul>
+		<br>
+		<ol>
+		{{#each phrases}}
+		<li>
+			<ul>
+				<li>{{french}}</li>
+				<li>{{english}}</li>
+			</ul>
+		</li>
+		<br>
+		{{/each}}
+		</ol>
 	</div>
 
 

@@ -1,0 +1,19 @@
+{
+	"phrases": [
+		{
+			"english": "The menu, please.",
+			"french": "La carte, s’il vous plaît",
+			"topic": "dining"
+		},
+		{
+			"english": "What would you like to eat?",
+			"french": "Que voudriez-vous manger?",
+			"topic": "dining"
+		},
+    {
+			"english": "I would love to invite you to dinner.",
+			"french": "J’aimerais t’inviter à dîner.",
+			"topic": "love"
+    }
+	]
+}

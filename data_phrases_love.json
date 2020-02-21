@@ -20,13 +20,13 @@
 		},
 		{
 			"english": "I would love to spend more time with you.",
-			"french": "J’aimerais passer plus de temps avec toi",
+			"french": "J’aimerais passer plus de temps avec toi.",
 			"liked": false,
 			"learned": false
         },
         {
 			"english": "I would love to invite you to dinner.",
-			"french": "J’aimerais t’inviter à dîner",
+			"french": "J’aimerais t’inviter à dîner.",
 			"liked": false,
 			"learned": false
         },
@@ -37,5 +37,5 @@
 			"learned": false
         }
 	]
-	
+
 }
