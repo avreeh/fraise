@@ -10,34 +10,41 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="css/fraise.css" rel="stylesheet">
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 </head>
 <body>
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '651616675407454',
-	      cookie     : true,
-	      xfbml      : true,
-	      version    : 'v6.0'
-	    });
-	      
-	    FB.AppEvents.logPageView();   
-	      
-	  };
 
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "https://connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
+	<img src="/images/logo.png" alt="Strawberry/Fraise" width="320" height="300" class="center">
+	
 	
 	<div class="login-page">
+
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '651616675407454',
+		      cookie     : true,
+		      xfbml      : true,
+		      version    : 'v3.2'
+		    });
+		      
+		    FB.AppEvents.logPageView();   
+		      
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "https://connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+
 	  <div class="form">
 	    <form class="register-form">
-	      <input type="text" placeholder="name"/>
+	      <input type="text" placeholder="username"/>
 	      <input type="password" placeholder="password"/>
 	      <input type="text" placeholder="email address"/>
 	      <button> <a href="index">create</a></button>
@@ -46,8 +53,12 @@
 	    <form class="login-form">
 	      <input type="text" placeholder="username"/>
 	      <input type="password" placeholder="password"/>
-	      <button> <a href="index">login</a></button>
-	      <p class="message">Not registered? <a href="https://www.facebook.com/help/570785306433644?helpref=hc_global_nav">Create a facebook account</a></p>
+	      <p class="facebookLogin">Please login through Facebook 
+	      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+	      <a href="https://www.facebook.com/help/570785306433644?helpref=hc_global_nav"> Need An Account</a>
+	      </p>
+	      <!-- <button> <a href="index">login</a></button> -->
+	      <p class="message">Done? Enter App -> <a href="index">Login</a></p>
 	    </form>
 	  </div>
 	</div>
