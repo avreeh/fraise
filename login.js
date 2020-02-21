@@ -3,12 +3,8 @@ exports.view = function(req, res){
 };
 
 $('.message a').click(function(){
-	$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
-
-// $('.button').click(function){
-// 	$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-// }
 
 
 FB.getLoginStatus(function(response) {
@@ -21,4 +17,3 @@ function checkLoginState() {
     statusChangeCallback(response);
   });
 }
-
