@@ -1,3 +1,10 @@
+var facebookSuccess = false;
+
+$(document).ready(function() {
+	$("#photo").hide();
+	$("#loginButton").click(loginListener);
+})
+
 function checkLoginState() {
 	FB.getLoginStatus(function(response) {
 	  statusChangeCallback(response);
@@ -20,7 +27,21 @@ function statusChangeCallback(response) {
 
 function changeUser(response) {
 	console.log('in changeUser function');
-	$("p.facebookLogin").hide();
-	$("#name").text(response.name);
+	facebookSuccess = true;
+	$("p.facebookLogin, input").hide();
+	$("#fbUsername").text("Welcome, " + response.name);
 	$("#photo").attr("src", response.picture.data.url);
+	$("#photo").show();
+}
+
+function loginListener(e) {
+	// console.log(document.getElementById('usernameBox').value);
+	if(document.getElementById('usernameBox').value == "" && facebookSuccess == false) {
+		e.preventDefault();
+		alert("Username cannot be empty!");
+	}
+	if(document.getElementById('passwordBox').value == "" && facebookSuccess == false) {
+		e.preventDefault();
+		alert("Password cannot be empty!");
+	}
 }

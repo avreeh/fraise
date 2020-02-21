@@ -51,46 +51,20 @@
 	      <p class="message">Already registered? <a href="#">Sign In Below</a></p>
 	    </form>
 	    <form class="login-form">
-	      <input type="text" placeholder="username"/>
-	      <input type="password" placeholder="password"/>
+	      <input type="text" placeholder="username" id="usernameBox"/>
+	      <input type="password" placeholder="password" id="passwordBox"/>
+		  <img id="photo" class='img-responsive' src="#"/>
+		  <h4 id="fbUsername" class="text-center"></h4>
 	      <p class="facebookLogin">Please login through Facebook 
 	      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-	      <a href="https://www.facebook.com/help/570785306433644?helpref=hc_global_nav"> Need An Account</a>
+	      <a href="https://www.facebook.com/help/570785306433644?helpref=hc_global_nav">Help on Facebook Accounts</a>
 	      </p>
 	      <!-- <button> <a href="index">login</a></button> -->
-	      <p class="message">Done? Enter App -> <a href="index">Login</a></p>
+	      <a href="index"><button type="button" class="btn btn-primary" id="loginButton">Log In</button></a>
 	    </form>
 	  </div>
 	</div>
 
-	<!-- <div class="navbar">
-  <a href="#" class="left nav-item help"><img src="images/help.png"></a>
-  <a href="profile"><img src="images/profile.png"></a>
-  <a href="favorites"><img src="images/heart.png"></a>
-	</div> -->
-
-
-	<!-- <div class="container">
-		<h1 class="title-text">Hello!</h1>
-		<h3 class="title-text">What would you like to talk about?</h3>
-		<br>
-		<br>
-		{{!-- <form id="search-form" role="form" method="get" action="/search">
-	    <div class="form-group">
-	      <label for="topic" id="search-prompt">Search</label>
-	      <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
-	    </div>
-		</form> --}}
-		{{!-- <p id="search-result"></p> --> <!-- this will change dynamically as defined in home.js --> <!-- --}}
-	</div> -->
-
-	<!-- {{#each topics}}
-	<div class="row topic-row">
-		<div class="column" id={{name}}>
-			<a href={{href}}><button type="button" class="btn btn-primary btn-block">{{name}}</button></a>
-		</div>
-	</div>
-	{{/each}} -->
 	
 </body>
 </html>
