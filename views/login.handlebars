@@ -1,28 +1,45 @@
 <!doctype html>
 <html lang = "en">
 <head>
-	<title>fraise - learn conversational French</title>
+	<title>fraise</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/fraise.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/home.js"></script>
+	<script src="js/login.js"></script>
 	<script src="js/bootstrap.js"></script>
 	{{> facebook}}
 	<script src="/js/facebook.js"></script>
 </head>
 <body>
 	
-	<div class="navbar">
+	<div class="login-page">
+	  <div class="form">
+	    <form class="register-form">
+	      <input type="text" placeholder="name"/>
+	      <input type="password" placeholder="password"/>
+	      <input type="text" placeholder="email address"/>
+	      <button>create</button>
+	      <p class="message">Already registered? <a href="#">Sign In</a></p>
+	    </form>
+	    <form class="login-form">
+	      <input type="text" placeholder="username"/>
+	      <input type="password" placeholder="password"/>
+	      <button>login</button>
+	      <p class="message">Not registered? <a href="#">Create an account</a></p>
+	    </form>
+	  </div>
+	</div>
+
+	<!-- <div class="navbar">
   <a href="#" class="left nav-item help"><img src="images/help.png"></a>
   <a href="profile"><img src="images/profile.png"></a>
   <a href="favorites"><img src="images/heart.png"></a>
-  <a href="login" ><img src="https://us.123rf.com/450wm/tvectoricons/tvectoricons1808/tvectoricons180807789/107679826-login-vector-icon-isolated-on-transparent-background-login-logo-concept.jpg?ver=6"></a>
-	</div>
+	</div> -->
 
 
-	<div class="container">
+	<!-- <div class="container">
 		<h1 class="title-text">Hello!</h1>
 		<h3 class="title-text">What would you like to talk about?</h3>
 		<br>
@@ -33,16 +50,16 @@
 	      <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
 	    </div>
 		</form> --}}
-		{{!-- <p id="search-result"></p> <!-- this will change dynamically as defined in home.js --> --}}
-	</div>
+		{{!-- <p id="search-result"></p> --> <!-- this will change dynamically as defined in home.js --> <!-- --}}
+	</div> -->
 
-	{{#each topics}}
+	<!-- {{#each topics}}
 	<div class="row topic-row">
 		<div class="column" id={{name}}>
 			<a href={{href}}><button type="button" class="btn btn-primary btn-block">{{name}}</button></a>
 		</div>
 	</div>
-	{{/each}}
+	{{/each}} -->
 	
 </body>
 </html>
