@@ -11,3 +11,21 @@ exports.view = function(req, res){
   //res.json(topics);
   res.render('profile', users);
 };
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+// $(function () {
+//   $('.pop-button').popover({
+//     trigger: 'focus'
+//   });
+// });
+
+// $('.popover-header').click(function() {
+// 	$('.pop-button').popover('hide');
+// });
