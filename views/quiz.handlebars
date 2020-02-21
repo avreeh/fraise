@@ -31,12 +31,14 @@
 	<br>
 	<h5 class='text-center'>Which is the correct translation?</h5>
 	<br>
-	<h4 class='text-center'>J'ai besoin d'aide pour rentrer a la maison.</h4>
+	<!--Todo: allow randomly generated phrase index -->
+	<h4 class='text-center'>{{phrases.[1].english}}</h4>
 	<br>
 
 	{{#each phrases}}
 	<div class="container">
-		<a href="#"><button type="button" class="btn btn-primary btn-block choice-button">{{english}}</button><a>
+		<a href="#"><button type="button" class="btn btn-primary btn-block choice-button" id="{{french}}">
+			{{french}}</button><a>
 	</div>
 	<br>
 	{{/each}}

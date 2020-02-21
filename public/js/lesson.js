@@ -139,8 +139,9 @@ function choiceListener(e)
 {
 	e.preventDefault();
 	var buttonText = $(this).text();
-	console.log(buttonText);
-	if (buttonText == "I need help getting home.") {
+	console.log("Correct answer is: " + frenchTranslations[1]);
+	console.log("User picked: " + buttonText);
+	if (buttonText.search(frenchTranslations[1]) != -1) {
 		$(this).text("Correct!");
 		$(".progress-bar").attr('aria-valuenow', "0");
 		$(".progress-bar").attr('style', "width: 100%;");
