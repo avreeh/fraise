@@ -1,6 +1,4 @@
 
-/* body { padding-top: 70px; } needed to prevent navbar overlaying body */
-
 .container {
     margin-left: 0px;
     margin-right: 0px;
@@ -18,16 +16,6 @@
 .title-text {
     text-align: center;
 }
-
-/* #search-prompt {
-    color:gray;
-}
-
-#search-box{
-    padding-left: 140px;
-    align-items: center;
-    padding-right: 140px;
-} */
 
 .topic-row{
     margin: auto;
@@ -107,6 +95,10 @@
     overflow:auto;
 }
 
+h4 {
+    font-size: 24px;
+}
+
 h3 {
     font-size: 18px;
 }
@@ -175,11 +167,57 @@ h1 {
     height: 300px;
   }
 
-  
+  .achievementlist {
+      margin-left: 20px;
+  }
+
   .achievementlist img {
       height: 40px;
   }
 
   .img-responsive {
       height: 120px;
+  }
+
+  .box {
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+    margin-bottom: 10px;
+  }
+
+  .centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #profilepic{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .picfriends {
+      height: 40px;
+  }
+
+  .tab {
+    position: absolute;
+  }
+
+  .row {
+    display: inline-block;
+  }
+
+  .right {
+      float: right;
+  }
+
+  a {
+      color:#7AC9AB;
   }

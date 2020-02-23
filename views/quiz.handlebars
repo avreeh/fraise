@@ -11,22 +11,19 @@
 	<link href="../css/fraise.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top  bg-light">
-		<div class="container-fluid">
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="nav navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" id="lessonLink" href="#"><span class="glyphicon glyphicon-remove"></span> </a>
-					</li>
-				</ul>
-				<h4 class='text-center'>Quiz</h4>
+
+	<div class="navbar">
+	<a id="lessonLink" href="#" class="left"><img src="../images/exit.png"></a>
+	{{!-- <a href="#" class="left nav-item help" id="practiceHelp"><img src="../images/help.png"></a> --}}
+	<h4 class='text-center' id="quizhead">Quiz</h4>
 				<div class="progress">
 					<div class="progress-bar progress-bar-striped active" role="progressbar" 
 					aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
 				</div>
-			</div>
-		</div>
-	</nav>
+    {{!-- <a href="profile"><img src="images/profile.png"></a>
+    <a href="favorites"><img src="images/heart.png"></a> --}}
+	</div>
+
 
 	<br>
 	<h5 class='text-center'>Which is the correct translation?</h5>

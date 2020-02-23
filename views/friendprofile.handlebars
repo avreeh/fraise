@@ -30,8 +30,8 @@
 	<div class="container">
 		<br>
 		<img src="images/strawberry.jpg" alt="profile pic" id="profilepic">
-		<h4 class ="text-center">strawberrypower</h4>
-		<p class="text-center">Did you know fraise means strawberry in French?</p>
+		<h4 class ="text-center">My Friend</h4>
+		<p class="text-center">I am a very cool person.</p>
 		<br>
 
 
@@ -62,28 +62,20 @@
 		<div class="container">
 			
 			<br>
-			{{#each profiles}}
 
 			<img src="images/pinkprofile.png" class="picfriends row">
-			<p class="row name">{{myUsername}}</p>
-			<a href="friendprofile" class="btn right" id="friendprofile">visit profile</a>
+			<p class="row name">Strawberrypower</p>
+			<a href="#" class="btn right" id="friendprofile">visit profile</a>
 			<hr>
-			{{/each}}
+            <img src="images/pinkprofile.png" class="picfriends row">
+			<p class="row name">Scott</p>
+			<a href="#" class="btn right" id="friendprofile">visit profile</a>
+			<hr>
+            <img src="images/pinkprofile.png" class="picfriends row">
+			<p class="row name">Bob</p>
+			<a href="#" class="btn right" id="friendprofile">visit profile</a>
+			<hr>
 
-			<button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button>
-
-			<form id="addFriendForm" role="form" method="get" action="/add">
-				<h5>Add a friend by username or email</h5>
-				<div class="form-group">
-				<label for="name">Username:</label>
-				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-				</div>
-				<div class="form-group">
-				<label for="description">Email:</label>
-				<input type="text" class="form-control" id="description" placeholder="Description" name="description">
-				</div>
-				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
-			</form>
 		</div>
 		<br>
 
