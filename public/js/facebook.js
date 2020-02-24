@@ -32,6 +32,7 @@ function changeUser(response) {
 	$("#fbUsername").text("Welcome, " + response.name);
 	$("#photo").attr("src", response.picture.data.url);
 	$("#photo").show();
+	$("#profileLink").attr("href", "profile/" + response.name);
 }
 
 function loginListener(e) {
@@ -40,8 +41,10 @@ function loginListener(e) {
 		e.preventDefault();
 		alert("Username cannot be empty!");
 	}
-	if(document.getElementById('passwordBox').value == "" && facebookSuccess == false) {
+	else if(document.getElementById('passwordBox').value == "" && facebookSuccess == false) {
 		e.preventDefault();
 		alert("Password cannot be empty!");
+	} else { // dynamically go to the input username page
+		$("#profileLink").attr("href", "profile/" + document.getElementById('usernameBox').value);
 	}
 }

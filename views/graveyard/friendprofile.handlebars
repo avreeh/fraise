@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang = "en">
+<head>
+	<title>fraise - learn conversational French</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/fraise.css" rel="stylesheet">
+	<script src="../js/jquery-1.11.0.js"></script>
+	<script src="../js/home.js"></script>
+	{{!-- <script src="js/profile.js"></script> --}}
+	<script src="../js/bootstrap.js"></script>
+	<meta charset = "UTF-8" />
+</head>
+<body>
+
+	
+	<div class="navbar">
+	<a href="../index" class="left"><img src="../images/back.png"></a>
+	<a href="#" class="left nav-item help" id="profileHelp"><img src="../images/help.png"></a>
+	{{!-- <h2>Profile</h2> --}}
+    <a href="../login"><img src="../images/logout.png"></a>
+	{{!-- <a href="login" ><img src="https://us.123rf.com/450wm/tvectoricons/tvectoricons1808/tvectoricons180807789/107679826-login-vector-icon-isolated-on-transparent-background-login-logo-concept.jpg?ver=6"></a> --}}
+    {{!-- <a href="favorites"><img src="images/heart.png"></a> --}}
+	</div>
+
+	<!-- <a href="login" ><img src="images/back.png"></a> -->
+
+
+	<div class="container">
+		<br>
+		<img src="../images/strawberry.jpg" alt="profile pic" id="profilepic">
+		<h4 class ="text-center">{{myUsername}}</h4>
+		<p class="text-center">{{myBio}}</p>
+		<br>
+
+
+	<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#achieve">Achievements</a></li>
+    <li><a data-toggle="tab" href="#friends">Friends</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="achieve" class="tab-pane fade in active">
+		<div class="achievementlist">
+			<br>
+			{{#if newProfile}} <!--Hide achievements if user is new -->
+			{{else}}
+				<div class="box">
+					<p class="centered">Lessons completed: 1</p>
+					<img src="../images/achievementlist.png">
+				</div>
+				<div class="box">
+					<p class="centered" >Quizzes passed: 1</p>
+					<img src="../images/achievementlist.png">
+					{{!-- <p>Days active: 1</p> --}}
+					{{!-- <p>Global rank: 99</p> --}}
+				</div>
+			{{/if}}
+		</div>
+		<br>
+    </div>
+    <div id="friends" class="tab-pane fade">
+
+		<div class="container">
+			
+			<br>
+			{{#each myFriends}}
+			<img src="../images/pinkprofile.png" class="picfriends row">
+			<p class="row name">{{this}}</p>
+			<a href="{{this}}" class="btn right" id="friendprofile">visit profile</a>
+			<hr>
+			{{/each}}
+			{{!-- <img src="../images/pinkprofile.png" class="picfriends row">
+			<p class="row name">Strawberrypower</p>
+			<a href="Strawberrypower" class="btn right" id="friendprofile">visit profile</a>
+			<hr>
+            <img src="../images/pinkprofile.png" class="picfriends row">
+			<p class="row name">Scott</p>
+			<a href="Scott" class="btn right" id="friendprofile">visit profile</a>
+			<hr>
+            <img src="../images/pinkprofile.png" class="picfriends row">
+			<p class="row name">Bob</p>
+			<a href="Bob" class="btn right" id="friendprofile">visit profile</a> --}}
+			<hr>
+
+		</div>
+		<br>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

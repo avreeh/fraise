@@ -1,22 +1,56 @@
 {
 	"profiles": [
 		{
+			"myUsername": "strawberrypower",
+			"myPwd": "fraise",
+			"myTextArea": 1,
+			"myEmail": "unknown",
+			"myBio": "Did you know fraise means strawberry in French?",
+			"newProfile": false,
+			"myFriends": [
+				"Alisha",
+				"Kara",
+				"Henry"
+			]
+		},
+		{
 			"myUsername": "Alisha",
 			"myPwd": "datascience",
 			"myTextArea": 1,
-			"myEmail": "unknown"
+			"myEmail": "unknown",
+			"myBio": "I am a very cool person.",
+			"newProfile": false,
+			"myFriends": [
+				"strawberrypower",
+				"Kara",
+				"Henry"
+			]
 		},
 		{
 			"myUsername": "Kara",
 			"myPwd": "cognitivescience",
 			"myTextArea": 1,
-			"myEmail": "unknown"
+			"myEmail": "unknown",
+			"myBio": "My name starts with a K, not C.",
+			"newProfile": false,
+			"myFriends": [
+				"strawberrypower",
+				"Alisha",
+				"Henry"
+			]
 		},
 		{
 			"myUsername": "Henry",
 			"myPwd": "computerscience",
 			"myTextArea": 1,
-			"myEmail": "unknown"
+			"myEmail": "unknown",
+			"myBio": "Your favorite CSE guy at UCSD",
+			"newProfile": false,
+			"myFriends": [
+				"strawberrypower",
+				"Alisha",
+				"Kara"
+			]
 		}
 	]
 }

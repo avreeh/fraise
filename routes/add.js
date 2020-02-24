@@ -6,8 +6,13 @@ exports.addFriend = function(request, response) {
 		"myUsername": request.query.name, 
 		"myPwd": "****",
 		"myTextArea": 1,
-		"myEmail": request.query.description
+		"myEmail": request.query.description,
+		"myBio": "Hello world! I'm new here!",
+		"myFriends": [],
+		"newProfile": true,
+		"viewAlt": true, // A/B testing only
+		'currentUser': false
 	});
 	console.log(data.friends);
-	response.render("profile", data);
+	response.render("profile", data.profiles[0]);
 }
