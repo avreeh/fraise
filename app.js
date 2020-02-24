@@ -61,6 +61,7 @@ app.get('/quiz/:id', quiz.view);
 app.get('/levelup', levelup.view);
 app.get('/topic/:id', topic.topicInfo);
 app.get('/login', login.view);
+app.get('/logout', profile.logout);
 
 // Example route
 // app.get('/users', user.list);

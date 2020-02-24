@@ -4,6 +4,7 @@ var firstTime = true;
 
 exports.view = function(req, res){
   var friendName = req.params.id; // name from URL
+
   for (i = 0; i < users.profiles.length; i++) // look for a name match in JSON
   {
     if(users.profiles[i]['myUsername'] == friendName)
@@ -18,19 +19,27 @@ exports.view = function(req, res){
       res.render('profile', users.profiles[i]); // if matched, render with existing info
     }
   }
-  if(firstTime) // set the permanent state for currentUser
-  {
-    currentUser = friendName;
-    firstTime = false;
-  }
-  console.log(currentUser);
-  res.render('profile', { // otherwise render a new blank profile
+  
+  newUser = { // create new user profile
     "myUsername": friendName,
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
     "newProfile": true,
-    "viewAlt": false  // A/B testing code
-  });
+    "viewAlt": true,  // A/B testing code
+    "currentUser": true
+  }
+  if(firstTime) // the user just came from the Login page and need their profile page
+  {
+    currentUser = friendName;
+    firstTime = false;
+    users.profiles.push(newUser);
+    res.render('profile', newUser);
+  }
+  else 
+  {
+    newUser['currentUser'] = false; // this disables Add Friend feature
+    res.render('profile', newUser);
+  }
 };
 
 exports.viewAlt = function(req, res){
@@ -101,6 +110,10 @@ exports.addFriend = function(req, res) {
   }
 }
 
+exports.logout = function(req, res) { 
+  firstTime = true;
+  res.redirect("login");
+}
 // function openForm() {
 //   document.getElementById("myForm").style.display = "block";
 // }
