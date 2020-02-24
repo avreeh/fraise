@@ -13,10 +13,18 @@ exports.view = function(req, res){
       if(firstTime) // set the permanent state for currentUser
       {
         currentUser = friendName;
+        users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
         firstTime = false;
       }
-      console.log(currentUser);
-      res.render('profile', users.profiles[i]); // if matched, render with existing info
+      else if (currentUser == friendName) // requested profile is the actual user's
+      {
+        users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
+      }
+      else 
+      {
+        users.profiles[i]['currentUser'] = false; // this disables Add Friend feature
+      }
+      return res.render('profile', users.profiles[i]); // if matched, render with existing info
     }
   }
   
@@ -33,12 +41,12 @@ exports.view = function(req, res){
     currentUser = friendName;
     firstTime = false;
     users.profiles.push(newUser);
-    res.render('profile', newUser);
+    return res.render('profile', newUser);
   }
   else 
   {
     newUser['currentUser'] = false; // this disables Add Friend feature
-    res.render('profile', newUser);
+    return res.render('profile', newUser);
   }
 };
 
@@ -55,7 +63,7 @@ exports.viewAlt = function(req, res){
         users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
         firstTime = false;
       }
-      if (currentUser == friendName) // requested profile is the actual user's
+      else if (currentUser == friendName) // requested profile is the actual user's
       {
         users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
       }
@@ -63,11 +71,11 @@ exports.viewAlt = function(req, res){
       {
         users.profiles[i]['currentUser'] = false; // this disables Add Friend feature
       }
-      res.render('profile', users.profiles[i]); // if matched, render with existing info
+      return res.render('profile', users.profiles[i]); // if matched, render with existing info
     }
   }
 
-  newUser = { // create new user profile
+  newUser = { // not found, create new user profile
     "myUsername": friendName,
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
@@ -80,18 +88,18 @@ exports.viewAlt = function(req, res){
     currentUser = friendName;
     firstTime = false;
     users.profiles.push(newUser);
-    res.render('profile', newUser);
+    return res.render('profile', newUser);
   }
   else 
   {
     newUser['currentUser'] = false; // this disables Add Friend feature
-    res.render('profile', newUser);
+    return res.render('profile', newUser);
   }
 };
 
 // method for getting the actual user's profile
 exports.viewDefault = function(req, res){
-  res.redirect("profile/" + currentUser);
+  return res.redirect("profile/" + currentUser);
   // users.profiles[0]['viewAlt'] = true;
   // res.render('profile', users.profiles[0]); // render default profile (strawberrypower)
 };
@@ -105,14 +113,14 @@ exports.addFriend = function(req, res) {
     if(users.profiles[i]['myUsername'] == currentUser) // locate the user's database and add it in
     {
       users.profiles[i]['myFriends'].push(newFriendName); // add new friend's name
-      res.redirect('/profile/' + currentUser);
+      return res.redirect('/profile/' + currentUser);
     }
   }
 }
 
 exports.logout = function(req, res) { 
   firstTime = true;
-  res.redirect("login");
+  return res.redirect("login");
 }
 // function openForm() {
 //   document.getElementById("myForm").style.display = "block";

@@ -18,7 +18,6 @@ var quiz = require('./routes/quiz');
 var levelup = require('./routes/levelup');
 var topic = require('./routes/topic');
 var login = require('./routes/login');
-var add = require('./routes/add');
 // var friendprofile = require('./routes/friendprofile');
 // Example route
 // var user = require('./routes/user');
