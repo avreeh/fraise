@@ -26,15 +26,98 @@
 
 	<!-- <a href="login" ><img src="images/back.png"></a> -->
 
-
-	<div class="container">
+{{#if viewAlt}} <!-- new design for A/B testing -->
+	<div class="container profileinfo">
 		<br>
-		<img src="../../images/strawberry.jpg" alt="profile pic" id="profilepic">
+		<div><img src="../../images/strawberry.jpg" alt="profile pic" id="profilepic"></div>
+		<div>
 		<h4 class ="text-center">{{myUsername}}</h4>
 		<p class="text-center">{{myBio}}</p>
+		</div>
+	</div>
+{{!-- 
+	<ul class="nav nav-tabs">
+	<li class="active"><a data-toggle="tab" href="#achieve">Achievements</a></li>
+	<li><a data-toggle="tab" href="#friends">Friends</a></li>
+  	</ul> --}}
+
+  <div>
+    <div id="achieve">
+		<div class="achievementlist">
+			{{#if newProfile}} <!--Hide achievements if user is new -->
+				<div class="twocolumn">
+				<div class="box">
+					<p class="achievescore">Lessons: 0</p>
+					<img src="../../images/achieveshort.png">
+				</div>
+				<div class="box">
+					<p class="achievescore" >Quizzes: 0</p>
+					<img src="../../images/achieveshort.png">
+					{{!-- <p>Days active: 1</p> --}}
+					{{!-- <p>Global rank: 99</p> --}}
+				</div>
+				</div>
+			{{else}}
+				<div class="twocolumn">
+				<div class="box">
+					<p class="achievescore">Lessons: 1</p>
+					<img src="../../images/achieveshort.png">
+				</div>
+				<div class="box">
+					<p class="achievescore" >Quizzes: 1</p>
+					<img src="../../images/achieveshort.png">
+					{{!-- <p>Days active: 1</p> --}}
+					{{!-- <p>Global rank: 99</p> --}}
+				</div>
+				</div>
+			{{/if}}
+		</div>
+    </div>
+    <div id="friends" class="tab-pane fade in active">
+
+		<div class="container">
+			<h3 class="textcenter">Friends</h3>	
+			<hr>		
+			{{#each myFriends}}
+				<img src="../../images/pinkprofile.png" class="picfriends row">
+				<p class="row name">{{this}}</p>
+				<a href="{{this}}" class="btn right" id="friendprofile">visit profile</a>
+				<hr>
+			{{/each}}
+
+			{{#if currentUser}} <!-- only the current user can add friends! -->
+			<div class="textcenter">
+			<button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button>
+			</div>
+
+			<form id="addFriendForm" role="form" method="get" action="/add">
+				<h5>Add a friend by username or email</h5>
+				<div class="form-group">
+				<label for="name">Username:</label>
+				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+				</div>
+				<div class="form-group">
+				<label for="description">Email:</label>
+				<input type="text" class="form-control" id="description" placeholder="Email" name="description">
+				</div>
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
+			</form>
+			{{/if}}
+		</div>
 		<br>
 
-{{#if viewAlt}} <!-- new design for A/B testing -->
+    </div>
+  </div>
+  
+{{else}} <!-- original profile page design-->
+
+	<div class="container">
+	<br>
+	<img src="../../images/strawberry.jpg" alt="profile pic" id="profilepic">
+	<h4 class ="text-center">{{myUsername}}</h4>
+	<p class="text-center">{{myBio}}</p>
+	<br>
+
 	<ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#achieve">Achievements</a></li>
 		<li><a data-toggle="tab" href="#friends">Friends</a></li>
@@ -45,6 +128,14 @@
 		<div class="achievementlist">
 			<br>
 			{{#if newProfile}} <!--Hide achievements if user is new -->
+				<div class="box">
+					<p class="centered">Lessons completed: 0</p>
+					<img src="../../images/achievementlist.png">
+				</div>
+				<div class="box">
+					<p class="centered" >Quizzes passed: 0</p>
+					<img src="../../images/achievementlist.png">
+				</div>
 			{{else}}
 				<div class="box">
 					<p class="centered">Lessons completed: 1</p>
@@ -73,7 +164,9 @@
 			{{/each}}
 
 			{{#if currentUser}} <!-- only the current user can add friends! -->
+			<div class="textcenter">
 			<button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button>
+			</div>
 
 			<form id="addFriendForm" role="form" method="get" action="/add">
 				<h5>Add a friend by username or email</h5>
@@ -94,48 +187,6 @@
     </div>
   </div>
   
-{{else}} <!-- original profile page design-->
-	<h5>Achievements</h5>
-	<div class="achievementlist">
-			<br>
-			{{#if newProfile}} <!--Hide achievements if user is new -->
-			{{else}}
-				<div class="box">
-					<p class="centered">Lessons completed: 1</p>
-					<img src="../../images/achievementlist.png">
-				</div>
-				<div class="box">
-					<p class="centered" >Quizzes passed: 1</p>
-					<img src="../../images/achievementlist.png">
-					{{!-- <p>Days active: 1</p> --}}
-					{{!-- <p>Global rank: 99</p> --}}
-				</div>
-			{{/if}}
-		</div>
-	<br>
-	<h5>Friends</h5>
-	{{#each myFriends}}
-		<img src="../../images/pinkprofile.png" class="picfriends row">
-		<p class="row name">{{this}}</p>
-		<a href="{{this}}" class="btn right" id="friendprofile">visit profile</a>
-		<hr>
-	{{/each}}
-	
-	<button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button>
-
-	<form id="addFriendForm" role="form" method="get" action="/add">
-		<h5>Add a friend by username or email</h5>
-		<div class="form-group">
-		{{!-- <label for="name">Username:</label> --}}
-		<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-		</div>
-		<div class="form-group">
-		{{!-- <label for="description">Email:</label> --}}
-		<input type="text" class="form-control" id="description" placeholder="Email" name="description">
-		</div>
-		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
-	</form>
-
 {{/if}}
 </div>
 
