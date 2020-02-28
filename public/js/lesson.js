@@ -29,7 +29,8 @@ function initializePage() {
 	$("#search-form").submit(searchListener);
 	// $(".name a").click(listenerFunction);
 	$(".frenchtoggle").click(pencilListener);
-	$(".glyphicon-heart").click(heartListener);
+	$(".glyphicon-heart-empty").click(heartListener);
+	$(".glyphicon-heart").click(unheartListener);
 	$("#lessonHelp").click(lessonHelpListener);
 	$("#practiceHelp").click(practiceHelpListener);
 	$(".phrase-button").click(phraseFlip);
@@ -108,9 +109,19 @@ function pencilListener(e)
 function heartListener(e)
 {
 	e.preventDefault();
+	$(this).attr("class", "glyphicon glyphicon-heart")
 	$(this).css("color", "red");
 	var id = $(this).attr('id').substring(5); // sequence number
-	
+	$(".glyphicon-heart").click(unheartListener); // allow toggle
+}
+
+function unheartListener(e)
+{
+	e.preventDefault();
+	$(this).attr("class", "glyphicon glyphicon-heart-empty")
+	$(this).css("color", "gray");
+	var id = $(this).attr('id').substring(5); // sequence number
+	$(".glyphicon-heart-empty").click(heartListener); // allow toggle
 }
 
 function lessonHelpListener(e)
