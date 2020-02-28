@@ -57,13 +57,8 @@
     width: 50%;
 }
 
-.phrase-pair{
-    padding-left: 5px;
-    padding: 20px 20px;
-}
 .phrase-pair p{
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 16px;
 }
 
 .column-phrase {
