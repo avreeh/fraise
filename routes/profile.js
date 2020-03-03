@@ -33,7 +33,7 @@ exports.view = function(req, res){
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
     "newProfile": true,
-    "viewAlt": true,  // A/B testing code
+    "viewAlt": false,  // A/B testing code
     "currentUser": true
   }
   if(firstTime) // the user just came from the Login page and need their profile page
