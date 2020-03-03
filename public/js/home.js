@@ -17,6 +17,7 @@ function initializePage() {
 	$('#profileHelp').click(profileHelpListener);
 	$('#favoritesHelp').click(favoritesHelpListener);
 	$('#addFriendButton').click(addFriendFormOpen);
+	$('.viewFriend').click(viewFriendListener);
 }
 
 function searchListener(e)
@@ -57,3 +58,8 @@ function addFriendFormOpen(e)
 	ga("send", "event", "like", "click");
 }
 
+function viewFriendListener(e)
+{
+	e.preventDefault();
+	ga("send", "event", "viewProfile", "click");
+}
