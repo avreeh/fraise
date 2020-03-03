@@ -60,6 +60,5 @@ function addFriendFormOpen(e)
 
 function viewFriendListener(e)
 {
-	e.preventDefault();
 	ga("send", "event", "viewProfile", "click");
 }
