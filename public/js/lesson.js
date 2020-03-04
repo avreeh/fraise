@@ -3,11 +3,14 @@ var topicName; // current topic name for lesson overview/practice/quiz
 var englishTranslations = []; // array of English translations read from the topic page (AJAX)
 var frenchTranslations = []; // array of French translations read from the topic page (AJAX)
 var lang = []; // the current displayed language (en/fr) for each phrase index
+var favorites = [];
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	topicName = getTopic();
 	console.log(topicName);
+	//var newFavoritesArray = {'topic': topicName, 'favEn': [], 'favFr': []};
+	//favorites.push(newFavoritesArray);
 	initializePage();
 	$.get("/topic/" + topicName, initializePhrases);
 	// var text = localStorage.getItem('../data_phrases_help.json');
@@ -93,10 +96,6 @@ function searchListener(e)
 	var userQuery = $(this).text();
 	console.log(userQuery);
 	$("#search-result").text("No relevant results found. This feature is pending development! Below are some suggestions.");
-	// var name = $(this).text();
-	// var newName = anagrammedName(name);
-	// console.log(newName);
-	// $(this).text(newName);
 }
 
 function pencilListener(e)
@@ -112,6 +111,10 @@ function heartListener(e)
 	$(this).attr("class", "glyphicon glyphicon-heart")
 	$(this).css("color", "red");
 	var id = $(this).attr('id').substring(5); // sequence number
+	var englishPhrase = $("#english" + id).text();
+	var frenchPhrase = $("#french" + id).text();
+	console.log(englishPhrase + " " + frenchPhrase);
+	window.location.href = "../../addFav/" + topicName + "+" + frenchPhrase + "+" + englishPhrase;
 	$(".glyphicon-heart").click(unheartListener); // allow toggle
 }
 

@@ -1,19 +1,30 @@
 {
-	"phrases": [
+	"favorites": [ 	
 		{
-			"english": "The menu, please.",
-			"french": "La carte, s’il vous plaît",
-			"topic": "dining"
+			"topic": "requests",
+			"phrasePairs": [
+				["french1", "english1"]
+			]
 		},
 		{
-			"english": "What would you like to eat?",
-			"french": "Que voudriez-vous manger?",
-			"topic": "dining"
+			"topic": "family",
+			"phrasePairs": []
 		},
-    {
-			"english": "I would love to invite you to dinner.",
-			"french": "J’aimerais t’inviter à dîner.",
-			"topic": "love"
-    }
+		{
+			"topic": "dining",
+			"phrasePairs": []
+		},
+		{
+			"topic": "love",
+			"phrasePairs": []
+		},
+		{
+			"topic": "lifestyle",
+			"phrasePairs": []
+		},
+		{
+			"topic": "school",
+			"phrasePairs": []
+		}
 	]
 }

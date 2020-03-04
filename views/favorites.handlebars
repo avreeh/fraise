@@ -2,6 +2,7 @@
 <html lang = "en">
 <head>
 	{{> common_resources}}
+	<script src="js/lesson.js"></script> <!-- contains script to store/read favorite phrases -->
 	{{> google_analytics}}
 </head>
 <body>
@@ -17,15 +18,17 @@
 		<br>
 		<br>
 		<ol>
-		{{#each phrases}}
-		<li>
+		{{#each favorites}} <!-- begin categorizing each topic -->
+		<li>{{topic}}
 			<ul>
-				<li>{{french}}</li>
-				<li>{{english}}</li>
+				{{#each phrasePairs}}  <!-- begin retrieving each phrase pair in the topic -->
+				<li>{{this.[0]}}</li> <!-- index 0 is a french phrase -->
+				<li>{{this.[1]}}</li> <!-- index 1 is an english phrase -->
+				{{/each}}
 			</ul>
 		</li>
 		<br>
-		{{/each}}
+		{{/each}}  <!-- end categorizing each topic -->
 		</ol>
 	</div>
 

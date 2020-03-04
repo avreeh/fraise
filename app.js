@@ -48,6 +48,7 @@ app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/achievements', achievements.view);
 app.get('/favorites', favorites.view);
+app.get('/addFav/:topic+:fr+:en', favorites.addFav);
 app.get('/profile/:id/page_A', profile.view); // for A/B testing only
 app.get('/profile/:id/page_B', profile.viewAlt);  // for A/B testing only
 // note: may need to delete the one line below for Google Analytics auto-redirect
