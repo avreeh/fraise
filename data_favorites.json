@@ -2,9 +2,7 @@
 	"favorites": [ 	
 		{
 			"topic": "requests",
-			"phrasePairs": [
-				["french1", "english1"]
-			]
+			"phrasePairs": []
 		},
 		{
 			"topic": "family",
