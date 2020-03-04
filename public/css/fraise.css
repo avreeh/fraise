@@ -38,6 +38,22 @@
     margin-bottom: 15px;
 }
 
+.topic-row .btn-lesson{
+    font-size: 20px;
+    line-height: 2;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+/* 
+#lesson-header {
+    position: fixed;
+}
+
+#lesson-body {
+    margin-top: 365px;
+} */
+
 .achievement-row{
     padding-left: 80px;
     padding-right: 80px;
