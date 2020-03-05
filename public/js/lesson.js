@@ -8,8 +8,14 @@ var lang = []; // the current displayed language (en/fr) for each phrase index
 $(document).ready(function() {
 	topicName = getTopic();
 	console.log(topicName);
+	var url = window.location.href;
+	if(url.search("lesson") != -1) {
+		$.get("/topic/" + topicName, initializeHearts);
+	}	
 	initializePage();
-	$.get("/topic/" + topicName, initializePhrases);
+	if(url.search("practice") != -1) {
+		$.get("/topic/" + topicName, initializePhrases);
+	}
 	// var text = localStorage.getItem('../data_phrases_help.json');
 	// console.log(text);
 	// phrases = JSON.parse(text);
@@ -27,9 +33,8 @@ function initializePage() {
 	$("#quizButton").attr("href", "../quiz/" + topicName); // dynamic links on lesson page
 	$("#lessonLink").attr("href", "../lesson/" + topicName); // dynamic links on lesson page
 	$("#search-form").submit(searchListener);
-	// $(".name a").click(listenerFunction);
 	$(".frenchtoggle").click(pencilListener);
-	$(".glyphicon-heart").click(heartListener);
+	$(".glyphicon-heart-empty").click(heartListener);
 	$("#lessonHelp").click(lessonHelpListener);
 	$("#practiceHelp").click(practiceHelpListener);
 	$(".phrase-button").click(phraseFlip);
@@ -38,6 +43,21 @@ function initializePage() {
 	$('.carousel').carousel({
 		interval: false // no auto "playing" of the carousel
 	})
+}
+
+function initializeHearts(result) {
+	var length = result['phrases'].length;
+	// console.log(length);
+	for(var i = 0; i < length; i++)
+	{
+		if(result['phrases'][i]['liked'] == true ) // marked as user-liked
+		{
+			$("#heart" + i).attr("class", "glyphicon glyphicon-heart"); // make the particular heart red
+			$("#heart" + i).css("color", "red");
+			$("#heart" + i).unbind(); // prevent duplicating event listeners
+			$("#heart" + i).click(unheartListener); // allow toggle
+		}
+	}
 }
 
 function getTopic() {
@@ -67,7 +87,7 @@ function getTopic() {
 		return "school";
 	} 
 	else {
-		//
+		return ""; // prevent null topic string
 	}
 }
 
@@ -92,10 +112,6 @@ function searchListener(e)
 	var userQuery = $(this).text();
 	console.log(userQuery);
 	$("#search-result").text("No relevant results found. This feature is pending development! Below are some suggestions.");
-	// var name = $(this).text();
-	// var newName = anagrammedName(name);
-	// console.log(newName);
-	// $(this).text(newName);
 }
 
 function pencilListener(e)
@@ -108,9 +124,41 @@ function pencilListener(e)
 function heartListener(e)
 {
 	e.preventDefault();
+	$(this).attr("class", "glyphicon glyphicon-heart")
 	$(this).css("color", "red");
 	var id = $(this).attr('id').substring(5); // sequence number
-	
+	var englishPhrase = $("#english" + id).text();
+	var frenchPhrase = $("#french" + id).text();
+	console.log(englishPhrase + " " + frenchPhrase);
+	//window.location.href = "../../addFav/" + topicName + "+" + frenchPhrase + "+" + englishPhrase;
+	$.ajax({
+		url: topicName + '/addFav', // the POST link is /lessons/{topic}/addFav
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({fr: frenchPhrase, en: englishPhrase}) // send data to be added to data_favorites.json
+	})
+	$(this).unbind(); // prevent duplicating event listeners
+	$(this).click(unheartListener); // allow toggle
+}
+
+function unheartListener(e)
+{
+	e.preventDefault();
+	$(this).attr("class", "glyphicon glyphicon-heart-empty")
+	$(this).css("color", "gray");
+	var id = $(this).attr('id').substring(5); // sequence number
+	var englishPhrase = $("#english" + id).text();
+	var frenchPhrase = $("#french" + id).text();
+	console.log(englishPhrase + " " + frenchPhrase);
+	//window.location.href = "../../addFav/" + topicName + "+" + frenchPhrase + "+" + englishPhrase;
+	$.ajax({
+		url: topicName + '/removeFav', // the POST link is /lessons/{topic}/removeFav
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({fr: frenchPhrase, en: englishPhrase}) // send data to be removed from data_favorites.json
+	})
+	$(this).unbind(); // prevent duplicating event listeners
+	$(this).click(heartListener); // allow toggle
 }
 
 function lessonHelpListener(e)

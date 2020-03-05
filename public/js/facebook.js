@@ -23,6 +23,10 @@ function statusChangeCallback(response) {
 		  console.log('Successfully logged in with Facebook');
 		   FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
 	}
+	if (response.status === 'unknown') {
+		// Logged into your app and Facebook.
+		alert("Facebook login failed. Please refresh the page and try again.");
+	}
 }
 
 function changeUser(response) {
@@ -32,6 +36,7 @@ function changeUser(response) {
 	$("#fbUsername").text("Welcome, " + response.name);
 	$("#photo").attr("src", response.picture.data.url);
 	$("#photo").show();
+	$("#loginButton").text("Continue");
 	$("#profileLink").attr("href", "profile/" + response.name);
 }
 

@@ -9,42 +9,53 @@
 	<link href="../css/bootstrap.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link href="../css/fraise.css" rel="stylesheet">
+	{{> google_analytics}}
 </head>
 <body>
 
 	<div class="navbar">
-	<a href="../index" class="left"><img src="../images/back.png"></a>
-	<a href="#" class="left nav-item help" id="lessonHelp"><img src="../images/help.png"></a>
-    <a href="../profile"><img src="../images/profile.png"></a>
-    <a href="../favorites"><img src="../images/heart.png"></a>
+		<a href="../index" class="left"><img src="../images/back.png"></a>
+		<a href="#" class="left nav-item help" id="lessonHelp"><img src="../images/help.png"></a>
+		<a href="../profile"><img src="../images/profile.png"></a>
+		<a href="../favorites"><img src="../images/heart.png"></a>
 	</div>
 
 	<div class = "lessonName"><h4 class="text-center" id="topicName"></h4></div>
 
+	<div class = "container" id="lesson-header">
+	<p>Below are the phrases for this lesson. Tap "Practice" to begin reviewing with frashcards, or tap "Quiz" to take a pop quiz. 
+		You can also tap on "..." beside each phrase to hide the French translation, or tap on the heart to favorite the phrase.</p>
+	<br>
+	<div class="topic-row">
+		<!-- TODO: change the attribute href for the below depending on topic rendered. -->
+		<a id="practiceButton" href="practice/help"><button type="button" class="btn btn-primary btn-block btn-lesson">Practice</button></a>
+	</div>
+	<div class="topic-row">
+		<a id="quizButton" href="quiz/help"><button type="button" class="btn btn-primary btn-block btn-lesson">Quiz</button></a>
+	</div>
+	<br><br>
+	<hr>
+	</div>
 
+	<div class = "container" id="lesson-body">
 	{{#each phrases}}
-	<div class="container-fluid row phrase-pair">
+	<div class="phrase-pair">
 		<div class="column column-phrase">
-			<p class="english">{{english}}</p>
+			<p class="english" id="english{{@index}}">{{english}}</p>
 			<br>
-			<p class="french">{{french}}</p>
-			<br>
+			<p class="french" id="french{{@index}}">{{french}}</p> <br><hr><br>
 		</div>
 		<div class="column column-icon">
 			<p><span class="frenchtoggle"><img src="../images/dotdot.png"></span></p><br>
-			<p><span class="glyphicon glyphicon-heart" id="heart{{@index}}"></span></p>
-			
+			<p><span class="glyphicon glyphicon-heart-empty" id="heart{{@index}}"></span></p> <br><hr><br>
 		</div>
 	</div>
+	<br>
 	<hr>
+	<br>
 	{{/each}}
 
-	<div class="row topic-row">
-		<!-- TODO: change the attribute href for the below depending on topic rendered. -->
-		<a id="practiceButton" href="practice/help"><button type="button" class="btn btn-primary btn-block">Practice</button></a>
-	</div>
-	<div class="row topic-row">
-		<a id="quizButton" href="quiz/help"><button type="button" class="btn btn-primary btn-block">Quiz</button></a>
+	
 	</div>
 </div>
 </body>

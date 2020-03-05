@@ -38,6 +38,22 @@
     margin-bottom: 15px;
 }
 
+.topic-row .btn-lesson{
+    font-size: 20px;
+    line-height: 2;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+/* 
+#lesson-header {
+    position: fixed;
+}
+
+#lesson-body {
+    margin-top: 365px;
+} */
+
 .achievement-row{
     padding-left: 80px;
     padding-right: 80px;
@@ -57,13 +73,8 @@
     width: 50%;
 }
 
-.phrase-pair{
-    padding-left: 5px;
-    padding: 20px 20px;
-}
 .phrase-pair p{
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 16px;
 }
 
 .column-phrase {

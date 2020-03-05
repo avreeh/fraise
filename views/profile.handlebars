@@ -10,18 +10,19 @@
 	<script src="../../js/home.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<meta charset = "UTF-8" />
+	{{> google_analytics}}
 </head>
 <body>
 
 	
 	<div class="navbar">
-	<a href="../../index" class="left"><img src="../../images/back.png"></a>
-	<a href="#" class="left nav-item help" id="profileHelp"><img src="../../images/help.png"></a>
-	{{!-- <h2>Profile</h2> --}}
-	<a href="/logout"><img src="../../images/logout.png"></a>
-    {{!-- <a href="../../login"><img src="../../images/logout.png"></a> --}}
-	{{!-- <a href="login" ><img src="https://us.123rf.com/450wm/tvectoricons/tvectoricons1808/tvectoricons180807789/107679826-login-vector-icon-isolated-on-transparent-background-login-logo-concept.jpg?ver=6"></a> --}}
-    {{!-- <a href="favorites"><img src="images/heart.png"></a> --}}
+		<a href="../../index" class="left"><img src="../../images/back.png"></a>
+		<a href="#" class="left nav-item help" id="profileHelp"><img src="../../images/help.png"></a>
+		{{!-- <h2>Profile</h2> --}}
+		<a href="/logout"><img src="../../images/logout.png"></a>
+		{{!-- <a href="../../login"><img src="../../images/logout.png"></a> --}}
+		{{!-- <a href="login" ><img src="https://us.123rf.com/450wm/tvectoricons/tvectoricons1808/tvectoricons180807789/107679826-login-vector-icon-isolated-on-transparent-background-login-logo-concept.jpg?ver=6"></a> --}}
+		{{!-- <a href="favorites"><img src="images/heart.png"></a> --}}
 	</div>
 
 	<!-- <a href="login" ><img src="images/back.png"></a> -->
@@ -81,7 +82,7 @@
 			{{#each myFriends}}
 				<img src="../../images/pinkprofile.png" class="picfriends row">
 				<p class="row name">{{this}}</p>
-				<a href="{{this}}" class="btn right" id="friendprofile">visit profile</a>
+				<a href="{{this}}" class="btn right viewFriend" id="friendprofile">visit profile</a>
 				<hr>
 			{{/each}}
 
@@ -159,7 +160,7 @@
 			{{#each myFriends}}
 				<img src="../../images/pinkprofile.png" class="picfriends row">
 				<p class="row name">{{this}}</p>
-				<a href="{{this}}" class="btn right" id="friendprofile">visit profile</a>
+				<a href="../{{this}}" class="btn right viewFriend" id="friendprofile">visit profile</a>
 				<hr>
 			{{/each}}
 
