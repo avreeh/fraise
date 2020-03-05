@@ -246,3 +246,8 @@ h1 {
   .textcenter{
       text-align: center;
   }
+
+  .border {
+      border-color: #7AC9AB;
+      border-style: solid;
+  }
