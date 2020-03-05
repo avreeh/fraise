@@ -64,27 +64,27 @@ function getTopic() {
 	var url = window.location.href;
 	if(url.search("requests") != -1)
 	{
-		return "requests";
+		return "Requests";
 	}
 	else if (url.search("lifestyle") != -1)
 	{
-		return "lifestyle";
+		return "Lifestyle";
 	}
 	else if (url.search("dining") != -1)
 	{
-		return "dining";
+		return "Dining";
 	}
 	else if (url.search("family") != -1)
 	{
-		return "family";
+		return "Family";
 	}
 	else if (url.search("love") != -1)
 	{
-		return "love";
+		return "Love";
 	}
 	else if (url.search("school") != -1)
 	{
-		return "school";
+		return "School";
 	} 
 	else {
 		return ""; // prevent null topic string

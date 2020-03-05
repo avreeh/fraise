@@ -1,27 +1,27 @@
 {
 	"favorites": [ 	
 		{
-			"topic": "requests",
+			"topic": "Requests",
 			"phrasePairs": []
 		},
 		{
-			"topic": "family",
+			"topic": "Family",
 			"phrasePairs": []
 		},
 		{
-			"topic": "dining",
+			"topic": "Dining",
 			"phrasePairs": []
 		},
 		{
-			"topic": "love",
+			"topic": "Love",
 			"phrasePairs": []
 		},
 		{
-			"topic": "lifestyle",
+			"topic": "Lifestyle",
 			"phrasePairs": []
 		},
 		{
-			"topic": "school",
+			"topic": "School",
 			"phrasePairs": []
 		}
 	]
