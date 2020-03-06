@@ -37,7 +37,9 @@ function changeUser(response) {
 	$("#photo").attr("src", response.picture.data.url);
 	$("#photo").show();
 	$("#loginButton").text("Continue");
-	$("#profileLink").attr("href", "profile/" + response.name);
+	var newLink = "profile/" + response.name;
+	console.log(newLink);
+	$("#profileLink").attr("href", newLink);
 }
 
 function loginListener(e) {
