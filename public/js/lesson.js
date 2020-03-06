@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$.get("/topic/" + topicName, initializeHearts);
 	}	
 	initializePage();
-	if(url.search("practice") != -1) {
+	if(url.search("lesson") == -1) {
 		$.get("/topic/" + topicName, initializePhrases);
 	}
 	// var text = localStorage.getItem('../data_phrases_help.json');
