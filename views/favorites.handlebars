@@ -16,20 +16,22 @@
 	<div class="container">
 		<h1 class="title-text">Favorites</h1>
 		<br>
-		<br>
-		<ol>
+
 		{{#each favorites}} <!-- begin categorizing each topic -->
-		<li>{{topic}}
-			<ul>
+		<div class="favCategory">{{topic}}</div>
+		
 				{{#each phrasePairs}}  <!-- begin retrieving each phrase pair in the topic -->
-				<li>{{this.[0]}}</li> <!-- index 0 is a french phrase -->
-				<li>{{this.[1]}}</li> <!-- index 1 is an english phrase -->
+				<div class="twocolumn">
+				<div class="rightborder">{{this.[0]}}</div> <!-- index 0 is a french phrase -->
+				<div>{{this.[1]}}</div> <!-- index 1 is an english phrase -->
+				</div>
+				<br>
 				{{/each}}
-			</ul>
-		</li>
+				
+		
+	
 		<br>
 		{{/each}}  <!-- end categorizing each topic -->
-		</ol>
 	</div>
 
 

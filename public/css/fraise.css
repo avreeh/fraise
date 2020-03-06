@@ -257,3 +257,22 @@ h1 {
   .textcenter{
       text-align: center;
   }
+
+  .border {
+      border-color: #7AC9AB;
+      border-style: solid;
+  }
+
+  .rightborder {
+      border-right: 1px solid grey;
+      /* border-style: solid; */
+  }
+
+  .favCategory {
+    text-align: center;
+    background-color: #FF8EA4;
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
