@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$.get("/topic/" + topicName, initializeHearts);
 	}	
 	initializePage();
-	if(url.search("lesson") == -1) {
+	if(url.search("quiz") != -1 || url.search("practice") != -1) {
 		$.get("/topic/" + topicName, initializePhrases);
 	}
 	// var text = localStorage.getItem('../data_phrases_help.json');
@@ -40,6 +40,7 @@ function initializePage() {
 	$(".phrase-button").click(phraseFlip);
 	$(".choice-button").click(choiceListener);
 	$("#0, #indicator0").addClass("active"); // for practice screen only
+	//$(".favCategory").text($(this).text().toUpperCase());
 	$('.carousel').carousel({
 		interval: false // no auto "playing" of the carousel
 	})
@@ -64,27 +65,27 @@ function getTopic() {
 	var url = window.location.href;
 	if(url.search("requests") != -1)
 	{
-		return "Requests";
+		return "requests";
 	}
 	else if (url.search("lifestyle") != -1)
 	{
-		return "Lifestyle";
+		return "lifestyle";
 	}
 	else if (url.search("dining") != -1)
 	{
-		return "Dining";
+		return "dining";
 	}
 	else if (url.search("family") != -1)
 	{
-		return "Family";
+		return "family";
 	}
 	else if (url.search("love") != -1)
 	{
-		return "Love";
+		return "love";
 	}
 	else if (url.search("school") != -1)
 	{
-		return "School";
+		return "school";
 	} 
 	else {
 		return ""; // prevent null topic string

@@ -22,7 +22,7 @@ exports.addFav = function(req, res){
   pair.push(req.body.fr);
   pair.push(req.body.en);
   for(i = 0; i < phrases.favorites.length; i++) {
-    if(phrases.favorites[i]['topic'] == topicName) // locate the topic in user's database and add it in
+    if(phrases.favorites[i]['topic'].toLowerCase() == topicName) // locate the topic in user's database and add it in
     {
       phrases.favorites[i]['phrasePairs'].push(pair);
       console.log(pair);
