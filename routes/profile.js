@@ -122,6 +122,10 @@ exports.logout = function(req, res) {
   firstTime = true;
   return res.redirect("login");
 }
+
+exports.getCurrentUser = function(req, res) {
+  res.json({currentUser});
+}
 // function openForm() {
 //   document.getElementById("myForm").style.display = "block";
 // }

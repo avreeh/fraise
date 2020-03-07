@@ -2,6 +2,11 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+	$.get("/getCurrentUser", function(res){
+		//console.log(res);
+		var currentUser = res['currentUser'];
+		initializeProfileIcon(currentUser);
+	});	
 	initializePage();
 })
 
@@ -18,6 +23,31 @@ function initializePage() {
 	$('#favoritesHelp').click(favoritesHelpListener);
 	$('#addFriendButton').click(addFriendFormOpen);
 	$('.viewFriend').click(viewFriendListener);
+	// $('#logout-link').click(confirmLogout);
+}
+
+function initializeProfileIcon(currentUser2) {
+	var url = window.location.href;
+	if(url.search("profile") != -1) {
+		var currentUser = new URLSearchParams(window.location.search).get('currentUser');
+		if (currentUser == null) {
+			currentUser = currentUser2;
+		}
+		const thisUser = $("#thisusername").text();
+		console.log("Current user: " + currentUser + "; this user: " + thisUser);
+		const queryStr = "?currentUser=" + currentUser;
+		$("a.viewFriend").each(function() {
+			//console.log("X");
+			$(this).attr("href", $(this).attr("href") + queryStr);
+		})
+		if(thisUser == currentUser) { // viewing own profile
+			$('#logout-link').click(confirmLogout);
+		}
+		else { // viewing someone elses profile; logout button becomes return to own profile button
+			$('#logout-link').attr("href", currentUser + queryStr);
+			$('#logout-img').attr("src", "../../images/profile.png");
+		}
+	}
 }
 
 function searchListener(e)
@@ -61,4 +91,16 @@ function addFriendFormOpen(e)
 function viewFriendListener(e)
 {
 	ga("send", "event", "viewProfile", "click");
+}
+
+function confirmLogout(e)
+{
+	if($(this).attr("href", "/logout"))
+	{
+		if (confirm("Do you really want to log out?")) {
+			// yes condition
+		} else {
+			e.preventDefault(); // do not log out
+		}
+	}
 }

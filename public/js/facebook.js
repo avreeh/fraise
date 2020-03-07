@@ -52,6 +52,7 @@ function loginListener(e) {
 		e.preventDefault();
 		alert("Password cannot be empty!");
 	} else { // dynamically go to the input username page
-		$("#profileLink").attr("href", "profile/" + document.getElementById('usernameBox').value);
+		var userName = document.getElementById('usernameBox').value;
+		$("#profileLink").attr("href", "profile/" + userName + "?currentUser=" + userName);
 	}
 }
