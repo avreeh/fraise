@@ -87,23 +87,38 @@
 }
 
 .phrase-button {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     height: auto;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin: auto;
-    overflow:auto;
+    overflow-wrap:break-word;
+    display: inline-block ;
+    text-overflow: ellipsis;
 }
 
 .choice-button {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: bold;
     height: auto;
     width: 85%;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin: auto;
-    overflow:auto;
+    overflow-wrap:break-word;
+    display: inline-block ;
+    text-overflow: ellipsis;
+}
+
+.btn-wrong {
+    background-color: #666666;
+    color: #FFFFFF;
 }
 
 h4 {
@@ -116,6 +131,10 @@ h3 {
 
 h1 {
     text-align: center;
+}
+
+p.french {
+    font-style: italic;
 }
 
 .lessonName {

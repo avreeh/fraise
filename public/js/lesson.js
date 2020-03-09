@@ -3,6 +3,7 @@ var topicName; // current topic name for lesson overview/practice/quiz
 var englishTranslations = []; // array of English translations read from the topic page (AJAX)
 var frenchTranslations = []; // array of French translations read from the topic page (AJAX)
 var lang = []; // the current displayed language (en/fr) for each phrase index
+var quizAnswerIndex;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -13,8 +14,11 @@ $(document).ready(function() {
 		$.get("/topic/" + topicName, initializeHearts);
 	}	
 	initializePage();
-	if(url.search("quiz") != -1 || url.search("practice") != -1) {
+	if(url.search("practice") != -1) {
 		$.get("/topic/" + topicName, initializePhrases);
+	}
+	if(url.search("quiz") != -1) {
+		$.get("/topic/" + topicName, initializePhrasesQuiz);
 	}
 	// var text = localStorage.getItem('../data_phrases_help.json');
 	// console.log(text);
@@ -27,7 +31,6 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$("#next-button").hide(); // for quiz screen only
 	$("#topicName").text(topicName.charAt(0).toUpperCase() + topicName.substring(1));
 	$("#practiceButton").attr("href", "../practice/" + topicName); // dynamic links on lesson page
 	$("#quizButton").attr("href", "../quiz/" + topicName); // dynamic links on lesson page
@@ -39,11 +42,7 @@ function initializePage() {
 	$("#practiceHelp").click(practiceHelpListener);
 	$(".phrase-button").click(phraseFlip);
 	$(".choice-button").click(choiceListener);
-	$("#0, #indicator0").addClass("active"); // for practice screen only
-	//$(".favCategory").text($(this).text().toUpperCase());
-	$('.carousel').carousel({
-		interval: false // no auto "playing" of the carousel
-	})
+
 }
 
 function initializeHearts(result) {
@@ -102,6 +101,39 @@ function initializePhrases(result) {
 		frenchTranslations.push(result['phrases'][i]['french']);
 		lang.push("fr");
 	}
+	// console.log(englishTranslations);
+	// console.log(frenchTranslations);
+	// console.log(lang);
+	$("#0, #indicator0").addClass("active"); // for practice screen only
+	//$(".favCategory").text($(this).text().toUpperCase());
+	$('.carousel').carousel({
+		interval: false // no auto "playing" of the carousel
+	})
+}
+
+function initializePhrasesQuiz(result) {
+	// console.log(result);
+	var length = result['phrases'].length;
+	const numChoices = Math.min(length, 4); // number of answer choices
+	var indexSelection = [];
+	// console.log(length);
+	for(var i = 0; i < numChoices; i++) // build answer choices
+	{
+		var rand; 
+		do {
+			rand = Math.floor((Math.random() * length));
+		}
+		while (indexSelection.includes(rand));
+		indexSelection.push(rand);
+		englishTranslations.push(result['phrases'][rand]['english']);
+		frenchTranslations.push(result['phrases'][rand]['french']);
+		$('#' + i).text(frenchTranslations[i]);
+	}
+	quizAnswerIndex = Math.floor((Math.random() * numChoices));
+	console.log("Phrase index: " + quizAnswerIndex);
+	$('#quizQuestion').text(englishTranslations[quizAnswerIndex]);
+	$("#next-button").hide(); 
+	$(".progress").hide();
 	// console.log(englishTranslations);
 	// console.log(frenchTranslations);
 	// console.log(lang);
@@ -197,16 +229,26 @@ function choiceListener(e)
 {
 	e.preventDefault();
 	var buttonText = $(this).text();
-	console.log("Correct answer is: " + frenchTranslations[1]);
+	console.log("Correct answer is: " + frenchTranslations[quizAnswerIndex]);
 	console.log("User picked: " + buttonText);
-	if (buttonText.search(frenchTranslations[1]) != -1) {
-		$(this).text("Correct!");
-		$(".progress-bar").attr('aria-valuenow', "0");
-		$(".progress-bar").attr('style', "width: 100%;");
-		$(".progress-bar").text('100%');
+	if (buttonText.search(frenchTranslations[quizAnswerIndex]) != -1) {
+		//$(this).text("Correct!");
+		const numChoices = 4;
+		for(var i = 0; i < numChoices; i++) // build answer choices
+		{
+			if(i != quizAnswerIndex) {
+				$('#' + i).hide();
+			}	
+		}
+		// $(".progress-bar").attr('aria-valuenow', "0");
+		// $(".progress-bar").attr('style', "width: 100%;");
+		// $(".progress-bar").text('100%');
+		$('#prompt-text').text("Correct! Great Job!");
 		$("#next-button").show();
 	} else {
-		$(this).text("Try again!");
+		$('#prompt-text').text("Try again!");
+		$(this).toggleClass("btn-primary btn-wrong");
+		// $(this).text("Try again!");
 	}
 	
 }
