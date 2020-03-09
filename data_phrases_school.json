@@ -1,14 +1,8 @@
 {
 	"phrases": [
 		{
-			"english": "What is your major?",
-			"french": "Quelle est ta majeure?",
-			"liked": false,
-			"learned": false
-		},
-		{
-			"english": "What is your favorite class?",
-			"french": "Quelle est ta classe préférée?",
+			"english": "Which high school/university do you go to?",
+			"french": "Dans quel collège/université allez-vous ?",
 			"liked": false,
 			"learned": false
 		},
@@ -19,17 +13,52 @@
 			"learned": false
 		},
 		{
+			"english": "What is your major?",
+			"french": "Quelle est ta matière principale ?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "What is your favorite class?",
+			"french": "Quelle est ta classe préférée ?",
+			"liked": false,
+			"learned": false
+		},
+        {
+			"english": "I am in the french club at the university.",
+			"french": "Je suis dans le club francais à l'université.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I am in the orchestra (band).",
+			"french": "Je suis dans l'orchestre.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I play tennis and basketball.",
+			"french": "Je joue au tennis et au basket.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I study day and night.",
+			"french": "J'étudie jour et nuit.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I need more sleep.",
+			"french": "J'ai besoin de plus de sommeil.",
+			"liked": false,
+			"learned": false
+		},
+		{
 			"english": "I don't know what I'm doing with my life.",
 			"french": "Je ne sais pas ce que je fais de ma vie.",
 			"liked": false,
 			"learned": false
-        },
-        {
-			"english": "I am in the french club at school.",
-			"french": "Je suis dans le club francais a l'ecole.",
-			"liked": false,
-			"learned": false
         }
 	]
-	
 }

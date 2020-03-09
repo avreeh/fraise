@@ -1,6 +1,24 @@
 {
 	"phrases": [
 		{
+			"english": "Can I make a reservation for lunch/dinner?",
+			"french": "Puis-je faire une réservation pour le déjeuner/dîner?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I'd like a table for two/three/four.",
+			"french": "J'aimerais une table pour deux/trois/quatre.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "We will arrive at 7 P.M.",
+			"french": "Nous arriverons à dix-neuf heure.",
+			"liked": false,
+			"learned": false
+		},
+		{
 			"english": "The menu, please.",
 			"french": "La carte, s’il vous plaît",
 			"liked": false,
@@ -13,8 +31,8 @@
 			"learned": false
 		},
 		{
-			"english": "I would like some water.",
-			"french": "J’aimerais de l’eau.",
+			"english": "I would like some water/wine.",
+			"french": "J’aimerais de l’eau/du vin.",
 			"liked": false,
 			"learned": false
 		},
@@ -25,11 +43,23 @@
 			"learned": false
         },
         {
-			"english": "Do you have some vegan options?",
-			"french": "Avez-vous des options végétaliennes?",
+			"english": "Do you have some vegetarian/vegan options?",
+			"french": "Avez-vous des options végétarienne/végétaliennes?",
 			"liked": false,
 			"learned": false
-        }
+		},
+		{
+			"english": "I want to try this one.",
+			"french": "Je veux essayer celui-ci.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "This dish is very delicious!",
+			"french": "Ce plat est très délicieux!",
+			"liked": false,
+			"learned": false
+		}
 	]
 	
 }

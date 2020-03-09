@@ -1,8 +1,14 @@
 {
 	"phrases": [
 		{
-			"english": "How is your family doing??",
+			"english": "How is your family doing?",
 			"french": "Comment va ta famille aujourd'hui?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "My family is doing well, what about yours?",
+			"french": "Ma famille va très bien, qu'en est-il de la vôtre?",
 			"liked": false,
 			"learned": false
 		},
@@ -13,14 +19,32 @@
 			"learned": false
 		},
 		{
-			"english": "My family is doing well, what about yours?",
-			"french": "Ma famille se porte très bien, qu'en est-il de la vôtre?",
+			"english": "I have a brother and a sister.",
+			"french": "J'ai un frère et une sœur.",
 			"liked": false,
 			"learned": false
 		},
 		{
-			"english": "Do you have any pets?",
-			"french": "Avez-vous des animaux domestiques?",
+			"english": "I am an only child.",
+			"french": "Je suis un seul enfant.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I am the youngest in my family.",
+			"french": "Je suis le plus jeune dans ma famille.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Do you have a pet?",
+			"french": "Tu as un animal de compagnie?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "This is my dog/cat",
+			"french": "C'est mon chien/chat.",
 			"liked": false,
 			"learned": false
         },
@@ -29,10 +53,10 @@
 			"french": "J'ai un chien nommé Fraise.",
 			"liked": false,
 			"learned": false
-        },
-        {
-			"english": "I am the youngest in my family.",
-			"french": "Je suis le plus jeune dans ma famille.",
+		},
+		{
+			"english": "No, I don't have any pets.",
+			"french": "Non, je n'ai pas de animal de compagnie.",
 			"liked": false,
 			"learned": false
 		}

@@ -1,8 +1,32 @@
 {
 	"phrases": [
 		{
-			"english": "Where is the nearest bathroom?",
-			"french": "Où est la salle de bain la plus proche?",
+			"english": "Excuse me.",
+			"french": "Pardon.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Do you speak English?",
+			"french": "Parlez-vous anglais ?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Sorry, I don't speak French.",
+			"french": "Désolé, je ne parle pas français.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Where is the restroom?",
+			"french": "Où sont les toilettes ?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I'm lost.",
+			"french": "Je me suis perdu(e).",
 			"liked": false,
 			"learned": false
 		},
@@ -13,22 +37,26 @@
 			"learned": false
 		},
 		{
-			"english": "What does that mean?",
-			"french": "Que veut dire ça?",
+			"english": "Can I use your phone?",
+			"french": "Puis-je utiliser votre téléphone ?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "What is it?",
+			"french": "Qu'est-ce que c'est ?",
 			"liked": false,
 			"learned": false
 		},
 		{
 			"english": "How do you say _______?",
-			"french": "Comment dites-vous _______?",
+			"french": "Comment dit-on _______ ?",
 			"liked": false,
 			"learned": false
-		}
-	],
-	"phrases-single": [
+		},
 		{
-			"english": "I need help getting home.",
-			"french": "J'ai besoin d'aide pour rentrer à la maison.",
+			"english": "What is this/that called?",
+			"french": "Comment appelle-t-on ça ?",
 			"liked": false,
 			"learned": false
 		}

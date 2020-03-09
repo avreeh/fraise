@@ -1,6 +1,12 @@
 {
 	"phrases": [
 		{
+			"english": "Hello handsome/beautiful, what's your name?",
+			"french": "Salut beau gosse, comment tu t'appelles ?",
+			"liked": false,
+			"learned": false
+		},
+		{
 			"english": "I love you.",
 			"french": "Je t'aime.",
 			"liked": false,
@@ -9,6 +15,18 @@
 		{
 			"english": "You look beautiful.",
 			"french": "Vous êtes belle.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Your dress is beautiful.",
+			"french": "Ta robe est d'une grande beauté.",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "Do you want to be my boyfriend/girlfriend?",
+			"french": "Tu veux être mon petit copain/petite copine?",
 			"liked": false,
 			"learned": false
 		},

@@ -7,6 +7,18 @@
 			"learned": false
 		},
 		{
+			"english": "Do you want to watch a movie?",
+			"french": "Veux tu regarder un film ?",
+			"liked": false,
+			"learned": false
+		},
+		{
+			"english": "I want to take a walk at the park.",
+			"french": "Je veux me promener au parc.",
+			"liked": false,
+			"learned": false
+		},
+		{
 			"english": "Do you have any rooms available?",
 			"french": "Avez-vous des chambres libres ?",
 			"liked": false,
@@ -23,7 +35,7 @@
 			"french": "C'est trop cher.",
 			"liked": false,
 			"learned": false
-        },
+		},
         {
 			"english": "I am in France for ten days.",
 			"french": "Je reste en France pendant dix jours.",
