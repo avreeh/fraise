@@ -272,7 +272,16 @@ h1 {
     text-align: center;
     background-color: #FF8EA4;
     color: white;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     margin-bottom: 10px;
-}
+    }
+
+    #quizhead {
+        padding-right: 65px;
+    }
+
+    #practicehead {
+        /* text-align: left; */
+        padding-right: 60px;
+    }

@@ -28,7 +28,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 	$("#next-button").hide(); // for quiz screen only
-	$("#topicName").text(topicName.toUpperCase());
+	$("#topicName").text(topicName.charAt(0).toUpperCase() + topicName.substring(1));
 	$("#practiceButton").attr("href", "../practice/" + topicName); // dynamic links on lesson page
 	$("#quizButton").attr("href", "../quiz/" + topicName); // dynamic links on lesson page
 	$("#lessonLink").attr("href", "../lesson/" + topicName); // dynamic links on lesson page
@@ -165,8 +165,7 @@ function unheartListener(e)
 function lessonHelpListener(e)
 {
 	e.preventDefault();
-	alert("Review the phrases on this page. To practice memorization, tap the ... icon to toggle the French phrase."
-	+ " To save a phrase for later, tap the Heart icon.");
+	alert("Below are the phrases for this lesson. Tap 'Practice' to begin reviewing with frashcards, or tap 'Quiz' to take a pop quiz. You can also tap on '...' beside each phrase to hide the French translation, or tap on the heart to favorite the phrase.");
 }
 
 function practiceHelpListener(e)
