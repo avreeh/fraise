@@ -11,7 +11,9 @@
 				"Alisha",
 				"Kara",
 				"Henry"
-			]
+			],
+			"quizzesCompleted": 1,
+			"lessonsCompleted": 0
 		},
 		{
 			"myUsername": "Alisha",
@@ -24,7 +26,9 @@
 				"strawberrypower",
 				"Kara",
 				"Henry"
-			]
+			],
+			"quizzesCompleted": 2,
+			"lessonsCompleted": 0
 		},
 		{
 			"myUsername": "Kara",
@@ -37,7 +41,9 @@
 				"strawberrypower",
 				"Alisha",
 				"Henry"
-			]
+			],
+			"quizzesCompleted": 3,
+			"lessonsCompleted": 0
 		},
 		{
 			"myUsername": "Henry",
@@ -50,7 +56,9 @@
 				"strawberrypower",
 				"Alisha",
 				"Kara"
-			]
+			],
+			"quizzesCompleted": 4,
+			"lessonsCompleted": 0
 		}
 	]
 }

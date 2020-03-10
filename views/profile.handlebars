@@ -45,33 +45,18 @@
   <div>
     <div id="achieve">
 		<div class="achievementlist">
-			{{#if newProfile}} <!--Hide achievements if user is new -->
-				<div class="twocolumn">
-				<div class="box">
-					<p class="achievescore">Lessons: 0</p>
-					<img src="../../images/achieveshort.png">
-				</div>
-				<div class="box">
-					<p class="achievescore" >Quizzes: 0</p>
-					<img src="../../images/achieveshort.png">
-					{{!-- <p>Days active: 1</p> --}}
-					{{!-- <p>Global rank: 99</p> --}}
-				</div>
-				</div>
-			{{else}}
-				<div class="twocolumn">
-				<div class="box">
-					<p class="achievescore">Lessons: 1</p>
-					<img src="../../images/achieveshort.png">
-				</div>
-				<div class="box">
-					<p class="achievescore" >Quizzes: 1</p>
-					<img src="../../images/achieveshort.png">
-					{{!-- <p>Days active: 1</p> --}}
-					{{!-- <p>Global rank: 99</p> --}}
-				</div>
-				</div>
-			{{/if}}
+			<div class="twocolumn">
+			<div class="box">
+				<p class="achievescore" id="lessons-completed">Lessons: 0</p>
+				<img src="../../images/achieveshort.png">
+			</div>
+			<div class="box">
+				<p class="achievescore" id="quizzes-completed">Quizzes: 0</p>
+				<img src="../../images/achieveshort.png">
+				{{!-- <p>Days active: 1</p> --}}
+				{{!-- <p>Global rank: 99</p> --}}
+			</div>
+			</div>
 		</div>
     </div>
     <div id="friends" class="tab-pane fade in active">
@@ -92,15 +77,15 @@
 			</div>
 
 			<form id="addFriendForm" role="form" method="get" action="/add">
-				<h5>Add a friend by username or email</h5>
+				<h5>Add a friend by username</h5>
 				<div class="form-group">
 				<label for="name">Username:</label>
 				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
 				</div>
-				<div class="form-group">
+				{{!-- <div class="form-group">
 				<label for="description">Email:</label>
 				<input type="text" class="form-control" id="description" placeholder="Email" name="description">
-				</div>
+				</div> --}}
 				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
 			</form>
 			{{/if}}
@@ -128,27 +113,14 @@
     <div id="achieve" class="tab-pane fade in active">
 		<div class="achievementlist">
 			<br>
-			{{#if newProfile}} <!--Hide achievements if user is new -->
 				<div class="box">
-					<p class="centered">Lessons completed: 0</p>
+					<p class="centered" id="lessons-completed">Lessons completed: 0</p>
 					<img src="../../images/achievementlist.png">
 				</div>
 				<div class="box">
-					<p class="centered" >Quizzes passed: 0</p>
+					<p class="centered" id="quizzes-passed">Quizzes passed: 0</p>
 					<img src="../../images/achievementlist.png">
 				</div>
-			{{else}}
-				<div class="box">
-					<p class="centered">Lessons completed: 1</p>
-					<img src="../../images/achievementlist.png">
-				</div>
-				<div class="box">
-					<p class="centered" >Quizzes passed: 1</p>
-					<img src="../../images/achievementlist.png">
-					{{!-- <p>Days active: 1</p> --}}
-					{{!-- <p>Global rank: 99</p> --}}
-				</div>
-			{{/if}}
 		</div>
 		<br>
     </div>
@@ -170,14 +142,10 @@
 			</div>
 
 			<form id="addFriendForm" role="form" method="get" action="/add">
-				<h5>Add a friend by username or email</h5>
+				<h5>Add a friend by username</h5>
 				<div class="form-group">
 				<label for="name">Username:</label>
 				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-				</div>
-				<div class="form-group">
-				<label for="description">Email:</label>
-				<input type="text" class="form-control" id="description" placeholder="Email" name="description">
 				</div>
 				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
 			</form>

@@ -30,6 +30,8 @@ exports.view = function(req, res){
   
   newUser = { // create new user profile
     "myUsername": friendName,
+		"quizzesCompleted": 0,
+		"lessonsCompleted": 0,
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
     "newProfile": true,
@@ -77,6 +79,8 @@ exports.viewAlt = function(req, res){
 
   newUser = { // not found, create new user profile
     "myUsername": friendName,
+    "quizzesCompleted": 0,
+		"lessonsCompleted": 0,
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
     "newProfile": true,
@@ -126,20 +130,27 @@ exports.logout = function(req, res) {
 exports.getCurrentUser = function(req, res) {
   res.json({currentUser});
 }
-// function openForm() {
-//   document.getElementById("myForm").style.display = "block";
-// }
 
-// function closeForm() {
-//   document.getElementById("myForm").style.display = "none";
-// }
+exports.getUserStats = function(req, res) {
+  var username = req.params.id;
+  var found = false;
+  for (i = 0; i < users.profiles.length; i++)
+  {
+    if(users.profiles[i]['myUsername'] == username) // locate the user's database and add it in
+    {
+      found = true;
+      return res.json({
+        "quizzes": users.profiles[i]['quizzesCompleted'], 
+        "lessons": users.profiles[i]['lessonsCompleted']
+      });
+    }
+  }
+  if (found == false)
+  {
+    return res.json({ // default return (prevents breaking)
+      "quizzes": 0, 
+      "lessons": 0
+    });
+  }
+}
 
-// $(function () {
-//   $('.pop-button').popover({
-//     trigger: 'focus'
-//   });
-// });
-
-// $('.popover-header').click(function() {
-// 	$('.pop-button').popover('hide');
-// });

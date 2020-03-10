@@ -59,6 +59,7 @@ app.get('/profile/:id', profile.viewAlt); // for non-specified version, default 
 app.get('/profile', profile.viewDefault); // for non-specified profile name, use default
 app.get('/getCurrentUser', profile.getCurrentUser);
 app.get('/add', profile.addFriend);
+app.get('/getUserStats/:id', profile.getUserStats);
 app.get('/lesson/:id', lesson.view);
 app.get('/practice/:id', practice.view);
 app.get('/quiz/:id', quiz.view);

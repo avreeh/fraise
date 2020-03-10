@@ -36,6 +36,7 @@
     width: 80%;
     margin: auto;
     margin-bottom: 15px;
+    border-radius: 30px;
 }
 
 .topic-row .btn-lesson{
@@ -44,6 +45,7 @@
     width: 80%;
     margin: auto;
     margin-bottom: 15px;
+    border-radius: 25px;
 }
 /* 
 #lesson-header {
@@ -53,6 +55,9 @@
 #lesson-body {
     margin-top: 365px;
 } */
+#addFriendButton{
+    border-radius: 20px;
+}
 
 .achievement-row{
     padding-left: 80px;
@@ -114,11 +119,13 @@
     overflow-wrap:break-word;
     display: inline-block ;
     text-overflow: ellipsis;
+    border-radius: 30px;
 }
 
 .btn-wrong {
     background-color: #666666;
     color: #FFFFFF;
+    border-radius: 30px;
 }
 
 h4 {
@@ -303,4 +310,15 @@ p.french {
     #practicehead {
         /* text-align: left; */
         padding-right: 60px;
+    }
+
+    .carousel-indicators {
+        bottom: -5px;
+    }
+
+    .carousel-control {
+        bottom: 25px;
+        width: 8%;
+        font-size: 25px;
+        opacity: 0.8;
     }

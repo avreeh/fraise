@@ -1,12 +1,26 @@
 'use strict';
+var thisUser;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	$.get("/getCurrentUser", function(res){
-		//console.log(res);
-		var currentUser = res['currentUser'];
-		initializeProfileIcon(currentUser);
-	});	
+	var url = window.location.href;
+	if(url.search("profile") != -1) { // do these only on the profile page
+		thisUser = $("#thisusername").text();
+		$.get("/getCurrentUser", function(res){
+			//console.log(res);
+			var currentUser = res['currentUser'];
+			initializeProfileIcon(currentUser);
+		});	
+		$.get("/getUserStats/" + thisUser, function(res){
+			console.log(res);
+			var quizzes = res['quizzes'];
+			var lessons = res['lessons'];
+			var newText = "Lessons: " + lessons;
+			$("#lessons-completed").text(newText);
+			newText = "Quizzes: " + quizzes;
+			$("#quizzes-completed").text(newText);
+		});	
+	}
 	initializePage();
 })
 
@@ -33,7 +47,7 @@ function initializeProfileIcon(currentUser2) {
 		if (currentUser == null) {
 			currentUser = currentUser2;
 		}
-		const thisUser = $("#thisusername").text();
+		// thisUser = $("#thisusername").text();
 		console.log("Current user: " + currentUser + "; this user: " + thisUser);
 		const queryStr = "?currentUser=" + currentUser;
 		$("a.viewFriend").each(function() {
