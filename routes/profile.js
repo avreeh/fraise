@@ -133,6 +133,9 @@ exports.getCurrentUser = function(req, res) {
 
 exports.getUserStats = function(req, res) {
   var username = req.params.id;
+  if(username == null || username == "undefined") {
+    username = currentUser;
+  }
   var found = false;
   for (i = 0; i < users.profiles.length; i++)
   {
@@ -151,6 +154,33 @@ exports.getUserStats = function(req, res) {
       "quizzes": 0, 
       "lessons": 0
     });
+  }
+}
+
+exports.setUserStats = function(req, res) {
+  var username = req.params.id;
+  if(username == null || username == "undefined") {
+    username = currentUser;
+  }
+  var found = false;
+  if(req.body.text == "quiz")
+  {
+    for (i = 0; i < users.profiles.length; i++)
+    {
+      if(users.profiles[i]['myUsername'] == username) // locate the user's database and add it in
+      {
+        found = true;
+        users.profiles[i]['quizzesCompleted'] += 1;
+        console.log("Quiz stat increment successful.");
+        return;
+      }
+    }
+  }
+  
+  if (found == false)
+  {
+    console.log("user not found; quiz stat increment unsuccessful.");
+    return;
   }
 }
 

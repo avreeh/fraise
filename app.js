@@ -60,6 +60,7 @@ app.get('/profile', profile.viewDefault); // for non-specified profile name, use
 app.get('/getCurrentUser', profile.getCurrentUser);
 app.get('/add', profile.addFriend);
 app.get('/getUserStats/:id', profile.getUserStats);
+app.post('/setUserStats/:id', profile.setUserStats);
 app.get('/lesson/:id', lesson.view);
 app.get('/practice/:id', practice.view);
 app.get('/quiz/:id', quiz.view);

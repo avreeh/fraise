@@ -137,6 +137,15 @@ function initializePhrasesQuiz(result) {
 	// console.log(englishTranslations);
 	// console.log(frenchTranslations);
 	// console.log(lang);
+
+	$.get("/getUserStats/undefined", function(res){
+		console.log(res);
+		var quizzes = res['quizzes'];
+		var lessons = res['lessons'];
+		if (quizzes != 0) { // not first quiz, skip achievement screen
+			$("#next-button-link").attr("href", "../lesson/" + topicName);
+		}
+	});	
 }
 
 function searchListener(e)
@@ -245,6 +254,12 @@ function choiceListener(e)
 		// $(".progress-bar").text('100%');
 		$('#prompt-text').text("Correct! Great Job!");
 		$("#next-button").show();
+		$.ajax({
+			url: '../setUserStats/undefined', // the POST link is /setUserStats/undefined
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify({text: "quiz"}) // send data to be added to data_favorites.json
+		})
 	} else {
 		$('#prompt-text').text("Try again!");
 		$(this).toggleClass("btn-primary btn-wrong");
