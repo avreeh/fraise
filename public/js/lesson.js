@@ -13,7 +13,9 @@ $(document).ready(function() {
 	if(url.search("lesson") != -1) {
 		$.get("/topic/" + topicName, initializeHearts);
 	}	
-	initializePage();
+	if(url.search("favorites") == -1) { // do not do this on favorites page
+		initializePage();
+	}	
 	if(url.search("practice") != -1) {
 		$.get("/topic/" + topicName, initializePhrases);
 	}
@@ -87,7 +89,7 @@ function getTopic() {
 		return "school";
 	} 
 	else {
-		return ""; // prevent null topic string
+		return " "; // prevent null topic string
 	}
 }
 
