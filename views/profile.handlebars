@@ -27,7 +27,6 @@
 
 	<!-- <a href="login" ><img src="images/back.png"></a> -->
 
-{{#if viewAlt}} <!-- new design for A/B testing -->
 	<div class="container profileinfo">
 		<br>
 		<div><img src="../../images/strawberry.jpg" alt="profile pic" id="profilepic"></div>
@@ -95,68 +94,6 @@
     </div>
   </div>
   
-{{else}} <!-- original profile page design-->
-
-	<div class="container">
-	<br>
-	<img src="../../images/strawberry.jpg" alt="profile pic" id="profilepic">
-	<h4 class ="text-center">{{myUsername}}</h4>
-	<p class="text-center">{{myBio}}</p>
-	<br>
-
-	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#achieve">Achievements</a></li>
-		<li><a data-toggle="tab" href="#friends">Friends</a></li>
-  	</ul>
-
-  <div class="tab-content">
-    <div id="achieve" class="tab-pane fade in active">
-		<div class="achievementlist">
-			<br>
-				<div class="box">
-					<p class="centered" id="lessons-completed">Lessons completed: 0</p>
-					<img src="../../images/achievementlist.png">
-				</div>
-				<div class="box">
-					<p class="centered" id="quizzes-passed">Quizzes passed: 0</p>
-					<img src="../../images/achievementlist.png">
-				</div>
-		</div>
-		<br>
-    </div>
-    <div id="friends" class="tab-pane fade">
-
-		<div class="container">
-			
-			<br>
-			{{#each myFriends}}
-				<img src="../../images/pinkprofile.png" class="picfriends row">
-				<p class="row name">{{this}}</p>
-				<a href="../{{this}}" class="btn right viewFriend" id="friendprofile">visit profile</a>
-				<hr>
-			{{/each}}
-
-			{{#if currentUser}} <!-- only the current user can add friends! -->
-			<div class="textcenter">
-			<button type="button" class="btn btn-primary" id="addFriendButton">Add Friend</button>
-			</div>
-
-			<form id="addFriendForm" role="form" method="get" action="/add">
-				<h5>Add a friend by username</h5>
-				<div class="form-group">
-				<label for="name">Username:</label>
-				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-				</div>
-				<input type="submit" id="submitBtn" class="btn btn-default" value="Add Friend"></input>
-			</form>
-			{{/if}}
-		</div>
-		<br>
-
-    </div>
-  </div>
-  
-{{/if}}
 </div>
 
 </body>

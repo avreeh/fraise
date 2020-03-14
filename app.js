@@ -52,10 +52,7 @@ app.get('/favorites', favorites.view);
 app.get('/favorites/getFav', favorites.getFav);
 app.post('/lesson/:id/addFav', favorites.addFav);
 app.post('/lesson/:id/removeFav', favorites.removeFav);
-app.get('/profile/:id/page_A', profile.view); // for A/B testing only
-app.get('/profile/:id/page_B', profile.viewAlt);  // for A/B testing only
-// note: may need to delete the one line below for Google Analytics auto-redirect
-app.get('/profile/:id', profile.viewAlt); // for non-specified version, default to B
+app.get('/profile/:id', profile.viewAlt); 
 app.get('/profile', profile.viewDefault); // for non-specified profile name, use default
 app.get('/getCurrentUser', profile.getCurrentUser);
 app.get('/add', profile.addFriend);

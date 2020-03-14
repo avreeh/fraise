@@ -2,78 +2,30 @@ var users = require('../data_friends.json');
 var currentUser;
 var firstTime = true;
 
-exports.view = function(req, res){
-  var friendName = req.params.id; // name from URL
-
-  for (i = 0; i < users.profiles.length; i++) // look for a name match in JSON
-  {
-    if(users.profiles[i]['myUsername'] == friendName)
-    {
-      users.profiles[i]['viewAlt'] = false; // A/B testing code
-      if(firstTime) // set the permanent state for currentUser
-      {
-        currentUser = friendName;
-        users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
-        firstTime = false;
-      }
-      else if (currentUser == friendName) // requested profile is the actual user's
-      {
-        users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
-      }
-      else 
-      {
-        users.profiles[i]['currentUser'] = false; // this disables Add Friend feature
-      }
-      return res.render('profile', users.profiles[i]); // if matched, render with existing info
-    }
-  }
-  
-  newUser = { // create new user profile
-    "myUsername": friendName,
-		"quizzesCompleted": 0,
-		"lessonsCompleted": 0,
-    "myBio": "Hello world! I'm new here!",
-    "myFriends": [],
-    "newProfile": true,
-    "viewAlt": false,  // A/B testing code
-    "currentUser": true
-  }
-  if(firstTime) // the user just came from the Login page and need their profile page
-  {
-    currentUser = friendName;
-    firstTime = false;
-    users.profiles.push(newUser);
-    return res.render('profile', newUser);
-  }
-  else 
-  {
-    newUser['currentUser'] = false; // this disables Add Friend feature
-    return res.render('profile', newUser);
-  }
-};
-
 exports.viewAlt = function(req, res){
   var friendName = req.params.id; // name from URL
   for (i = 0; i < users.profiles.length; i++) // look for a name match in JSON
   {
     if(users.profiles[i]['myUsername'] == friendName)
     {
-      users.profiles[i]['viewAlt'] = true;  // A/B testing code
+      //users.profiles[i]['viewAlt'] = true;  // A/B testing code
       if(firstTime) // set the permanent state for currentUser
       {
         currentUser = friendName;
         users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
         firstTime = false;
+        return res.redirect('index'); 
       }
       else if (currentUser == friendName) // requested profile is the actual user's
       {
         users.profiles[i]['currentUser'] = true; // this allows Add Friend feature
+        return res.render('profile', users.profiles[i]); // if matched, render with existing info
       }
       else 
       {
         users.profiles[i]['currentUser'] = false; // this disables Add Friend feature
+        return res.render('profile', users.profiles[i]); // if matched, render with existing info
       }
-      return res.render('profile', users.profiles[i]); // if matched, render with existing info
     }
   }
 
@@ -84,7 +36,7 @@ exports.viewAlt = function(req, res){
     "myBio": "Hello world! I'm new here!",
     "myFriends": [],
     "newProfile": true,
-    "viewAlt": true,  // A/B testing code
+    //"viewAlt": true,  // A/B testing code
     "currentUser": true
   }
   if(firstTime) // the user just came from the Login page and need their profile page
@@ -92,7 +44,8 @@ exports.viewAlt = function(req, res){
     currentUser = friendName;
     firstTime = false;
     users.profiles.push(newUser);
-    return res.render('profile', newUser);
+    //return res.render('profile', newUser);
+    return res.redirect('index');
   }
   else 
   {
